@@ -16,9 +16,9 @@ namespace QuickFix.Fields
         public const int BeginSeqNo = 7;
         public const int BeginString = 8; //Начало сообщения
         public const int BodyLength = 9; //Длина сообщения
-        public const int CheckSum = 10;
-        public const int ClOrdID = 11;
-        public const int Commission = 12;
+        public const int CheckSum = 10; //ggggggggg
+        public const int ClOrdID = 11; //ggggggggg
+        public const int Commission = 12;  //ggggggggg
         public const int CommType = 13;
         public const int CumQty = 14;
         public const int Currency = 15;
