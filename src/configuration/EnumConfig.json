@@ -1,0 +1,18 @@
+{
+  "42ff2fe7-d54b-4eef-a13f-29c22bc7c789": {
+    "data": {
+      "id": "id",
+      "label": ["name"]
+    },
+    "apiName": "/api/UserRoles/Gets"
+  },
+  "8fee6240-91c8-4f5b-8ad3-2d5c12bfd361": {
+    "data": {
+      "id": "id",
+      "label": ["code", " ", "issuer_name", " ", "security_type"],
+      "issuer": ["issuer"]
+    },
+    "apiName": "/api/Securities/Gets"
+  }
+}
+

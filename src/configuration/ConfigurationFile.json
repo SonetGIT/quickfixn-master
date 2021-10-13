@@ -1,0 +1,51 @@
+{
+  "enumConfig": {
+    "42ff2fe7-d54b-4eef-a13f-29c22bc7c789": {
+      "data": {
+        "id": "id",
+        "label": ["name"]
+      },
+      "apiName": "/api/UserRoles/Gets"
+    },
+    "1fd4d8d5-6f3b-4a2e-aa99-90eba3c354f9": {
+      "data": {
+        "id": "id",
+        "user_id": ["user_id"],
+        "name": ["name"],
+        "firstname": ["firstname"],
+        "lastname": ["lastname"],
+        "attributes": ["attributes"]
+      },
+      "apiName": "/api/Users/Gets"
+    },
+    "3e66280f-9295-46af-8855-cfce4d98faf1": {
+      "data": {
+        "id": "id",
+        "label": ["name"]
+      },
+      "apiName": "/api/InstrumentGroups"
+    },
+    "3e819d7e-25d0-4a04-a3ff-092fd348a375": {
+      "data": {
+        "id": "id",
+        "label": ["code"]
+      },
+      "apiName": "/api/FinanceInstruments"
+    },
+    "c324d86f-3a3b-43b2-9514-d983b2982794": {
+      "data": {
+        "id": "id",
+        "label": ["accnumber"]
+      },
+      "apiName": "/api/Accounts"
+    },
+    "234235253": {
+      "data": {
+        "id": "id",
+        "label": ["name", "-", "code", " ", "name"]
+      },
+      "apiName": "/api/InstrumentGroups"
+    }
+  }
+}
+

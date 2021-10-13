@@ -1,0 +1,47 @@
+{
+  "Administrator": {
+    "null": [],
+    "MainRefTblBtns": [
+      {
+        "name": "close",
+        "label": "Закрыть",
+        "backgroundColor": "#D1FBD1",
+        "fontColor": "black"
+      }
+    ],
+    "RefTblBtns": [
+      {
+        "name": "showCreateRef",
+        "label": "Создать",
+        "backgroundColor": "#D1FBD1",
+        "fontColor": "black"
+      },
+      {
+        "name": "backToMainRef",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE",
+        "fontColor": "black"
+      },
+      {
+        "name": "close",
+        "label": "Закрыть",
+        "backgroundColor": "#D1FBD1",
+        "fontColor": "black"
+      }      
+    ],
+    "UserTblBtns": [
+      {
+        "name": "showCreateUserForm",
+        "label": "Создать",
+        "backgroundColor": "#D1FBD1",
+        "fontColor": "black"
+      },
+      {
+        "name": "close",
+        "label": "Закрыть",
+        "backgroundColor": "#D1FBD1",
+        "fontColor": "black"
+      }      
+    ]
+  }
+}

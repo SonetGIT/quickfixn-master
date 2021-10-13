@@ -1,0 +1,24 @@
+{
+  "Administrator": {
+    "null": [],
+    "MainRefGridBtn": [
+      {
+        "name": "showRefSearchForm",
+        "label": "Открыть"        
+      }
+    ],
+    "RefGridBtn": [
+      {
+        "name":"showEditRef",
+        "label":"Открыть"
+      }
+    ],
+    "UserGridBtn": [
+      {
+        "name":"showEditUserForm",
+        "label":"Открыть"
+      }
+    ]
+
+  }
+}

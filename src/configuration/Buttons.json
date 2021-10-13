@@ -1,0 +1,127 @@
+{
+  "Administrator": {
+    "null": [],
+    "MainRefSearchBtn": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D1FBD1",
+        "fontColor": "black"
+      },
+      {
+        "name": "cancel",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE",
+        "fontColor": "black"
+      }
+    ],
+    "RefSearchBtn": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D1FBD1",
+        "fontColor": "black"
+      },
+      {
+        "name": "cancel",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE",
+        "fontColor": "black"
+      }
+    ],
+    "RefEditBtn": [
+      {
+        "name": "updateRef",
+        "label": "Сохранить"
+      },
+      {
+        "name": "deleteRef",
+        "label": "Удалить"
+      },
+      {
+        "name": "backToRefSearchForm",
+        "label": "Отмена"
+      }
+    ],
+    "RefSaveBtn": [
+      {
+        "name": "saveRef",
+        "label": "Сохранить"
+      },
+      {
+        "name": "backToMainRef",
+        "label": "Отмена"
+      }
+    ],
+    "UserSearchBtn": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D1FBD1",
+        "fontColor": "black"
+      },
+      {
+        "name": "cancel",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE",
+        "fontColor": "black"
+      }
+    ],
+    "UserEditBtn": [
+      {
+        "name": "updateUser",
+        "label": "Сохранить"
+      },
+      {
+        "name": "deleteUser",
+        "label": "Удалить"
+      },
+      {
+        "name": "backToUserSearchForm",
+        "label": "Отмена"
+      }
+    ],
+    "UserSaveBtn": [
+      {
+        "name": "saveUser",
+        "label": "Сохранить"
+      },
+      {
+        "name": "backToUserSearchForm",
+        "label": "Отмена"
+      }
+    ],
+    "EditUserButtons": [
+      {
+        "name": "updateUser",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1",
+        "fontColor": "black"
+      },
+      {
+        "name": "resetPassword",
+        "label": "Сбросить пароль",
+        "backgroundColor": "#FBDCDE",
+        "fontColor": "black"
+      },
+      {
+        "name": "disableUser",
+        "label": "Заблокировать",
+        "backgroundColor": "#FBDCDE",
+        "fontColor": "black"
+      },
+      {
+        "name": "enableUser",
+        "label": "Разблокировать",
+        "backgroundColor": "#D1FBD1",
+        "fontColor": "black"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE",
+        "fontColor": "black"
+      }
+    ]
+  }
+}
