@@ -27,16 +27,17 @@ namespace SimpleAcceptor
             Console.WriteLine("IN (передача запроса на биржу):  " + message);
             var sections = message.ToString().Split(Message.SOH);
             Console.WriteLine("  ");
-            Console.WriteLine("TAG = Значения: РАСШИФРОВКА СООБЩЕНИЯ");
+            Console.WriteLine("TAG SimpleAcceptor = Значения: РАСШИФРОВКА СООБЩЕНИЯ");
             bool isNewOrder = false;
             string instrumentCode = "";
             int orgId = 0;
-            var bidDirection = 0;//0-BUY, 1-SELL
-            var bidType = 1;//0-MARKET, 1-LIMITED
+            var bidDirection = 0; //0-BUY, 1-SELL
+            var bidType = 1; //0-MARKET, 1-LIMITED
             double price = 0;
             double amount = 0;
             var userId = "";
             bool tag21 = false;
+            bool isQuoteRequest = false;
             try
             {
                 foreach (var tagObj in sections)
@@ -45,6 +46,10 @@ namespace SimpleAcceptor
                     var tagId = tagObj.Split('=')[0];
                     var tagVal = tagObj.Split('=')[1];
 
+                    if (tagId == 1.ToString())
+                    {
+                        tagId = "(1) Торговый счет";
+                    }
                     if (tagId == 8.ToString())
                     {
                         tagId = "(8) Начало сообщения, версия протокола";
@@ -66,6 +71,11 @@ namespace SimpleAcceptor
                     else if (tagId == 35.ToString())
                     {
                         tagId = "(35) Тип сообщения"; //MsgType
+                        if (tagVal == "R")
+                        {
+                            tagVal = "Запрос на котировку";
+                            isQuoteRequest = true;
+                        }
                         if (tagVal == "D")
                         {
                             tagVal = "Новая заявка";
@@ -73,11 +83,11 @@ namespace SimpleAcceptor
                         }
                         else if (tagVal == "F")
                         {
-                            tagVal = "Отменить заказ";
+                            tagVal = "Отменить заявка";
                         }
                         else if (tagVal == "G")
                         {
-                            tagVal = "Заменить заказ";
+                            tagVal = "Заменить заявка";
                         }
                     }
                     else if (tagId == 34.ToString())
@@ -117,6 +127,14 @@ namespace SimpleAcceptor
                             bidDirection = 1;
                         }
                     }
+                    else if (tagId == 131.ToString())
+                    {
+                        tagId = "(131) № запроса на котировку";
+                    }
+                    else if (tagId == 146.ToString())
+                    {
+                        tagId = "(146) Задает указанное количество повторяющихся символов"; //NoRelatedSym
+                    }
                     else if (tagId == 167.ToString())
                     {
                         tagId = "(167) Фьючерсов";
@@ -140,11 +158,7 @@ namespace SimpleAcceptor
                     else if (tagId == 269.ToString())
                     {
                         tagId = "(269) Тип входа MD"; //MDEntryType
-                    }
-                    else if (tagId == 146.ToString())
-                    {
-                        tagId = "(146) Нет связанных символов"; //NoRelatedSym
-                    }
+                    }                    
                     else if (tagId == 55.ToString())
                     {
                         tagId = "(55) На акции компании"; //Symbol
@@ -242,6 +256,7 @@ namespace SimpleAcceptor
                 Console.WriteLine("  ");
                 Console.WriteLine("ID пользователя");
                 Console.WriteLine("userId - " + userId);
+                
                 try
                 {
                     sendToKse(new
@@ -267,9 +282,95 @@ namespace SimpleAcceptor
 
                 }
             }
+
+            if (isQuoteRequest)
+            {
+                _session = Session.LookupSession(sessionID);
+                int instrumentId = 0;
+                foreach (var intr in all_instruments)
+                {
+                    if (intr.code == instrumentCode) instrumentId = intr.id;
+                }
+                int accountId = 0;
+                foreach (var acc in _db.accounts.ToList())
+                {
+                    if (acc.organizationId == orgId && acc.accountTypeId == 300) accountId = acc.id;
+                }
+                Console.WriteLine("  ");
+                Console.WriteLine("Поля и их значения");
+                Console.WriteLine("ID ценной бумаги (ID инструемнта)");
+                Console.WriteLine("instrumentId - " + instrumentId);
+                Console.WriteLine("  ");
+                Console.WriteLine("ID счета");
+                Console.WriteLine("accountId - " + accountId);
+                Console.WriteLine("  ");
+                Console.WriteLine("ID организации");
+                Console.WriteLine("orgId - " + orgId);
+                Console.WriteLine("  ");
+                Console.WriteLine("Направления заявки");
+                Console.WriteLine("bidDirection - " + bidDirection);
+                Console.WriteLine("  ");
+                Console.WriteLine("Тип заявки");
+                Console.WriteLine("bidType - " + bidType);
+                Console.WriteLine("  ");
+                Console.WriteLine("Цена");
+                Console.WriteLine("price - " + price);
+                Console.WriteLine("  ");
+                Console.WriteLine("Стоимость");
+                Console.WriteLine("amount - " + amount);
+                Console.WriteLine("  ");
+                Console.WriteLine("ID пользователя");
+                Console.WriteLine("userId - " + userId);
+
+                try
+                {
+                    createSellBuyOrderToKse(new
+                    {
+                        organizationId = orgId,
+                        financeInstrumentId = instrumentId,
+                        userId = userId,
+                        accountId,
+                        bidDirection,
+                        bidType,
+                        lots = new[]
+                    {
+                        new
+                        {
+                            price,
+                            amount
+                        }
+                    }
+                    });
+                    _session.Send(CreateQuoteResponse44(instrumentCode));
+                }
+                catch (Exception e)
+                {
+
+                }                
+            }
+                
         }
-        
-        private void sendToKse(object reqObj)
+        private QuickFix.FIX44.QuoteResponse CreateQuoteResponse44(string instrumentCode = "KGZSb")
+        {
+            string qrid = new Random().Next(111111111, 999999999).ToString();
+            QuickFix.Fields.QuoteRespID QuoteRespID = new QuickFix.Fields.QuoteRespID(qrid);
+            QuickFix.Fields.QuoteRespType quoteRespType = new QuickFix.Fields.QuoteRespType(QuoteRespType.HIT_LIFT);
+
+            // create QuoteRequest instance
+            QuickFix.FIX44.QuoteResponse message = new QuickFix.FIX44.QuoteResponse(QuoteRespID, quoteRespType, new QuickFix.Fields.Symbol(instrumentCode));
+
+            // Symbol, OrderQty and Account are in a repeating groups
+            /*QuickFix.Group group = new QuickFix.Group(QuickFix.Fields.Tags.NoRelatedSym, QuickFix.Fields.Tags.Symbol);
+            group.SetField(new QuickFix.Fields.Symbol(instrumentCode));
+            group.SetField(new QuickFix.Fields.OrderQty(500));
+            group.SetField(new QuickFix.Fields.Account(accountNo));
+
+            message.AddGroup(group);*/
+
+            return message;
+        }
+        //Метод подачи заявки на SELL/BUY
+        private void createSellBuyOrderToKse(object reqObj)
         {
             var jsonInString = JsonConvert.SerializeObject(reqObj);
             var createBidURL = "http://192.168.2.150:5002/api/Trading/CreateFixBid";
@@ -284,7 +385,7 @@ namespace SimpleAcceptor
                 if (res.isSuccess)
                 {
                     Console.WriteLine("  ");
-                    Console.WriteLine("OUT (ответ от биржи): Ваша заявка успешно принята в ТС!");
+                    Console.WriteLine("sendToKse OUT (ответ от биржи): Ваша заявка успешно принята в ТС!");
                 }
                 else
                 {
@@ -300,27 +401,24 @@ namespace SimpleAcceptor
 
         public void ToApp(Message message, SessionID sessionID)
         {
-            //Console.WriteLine("OUT (ответ от биржи): " + message);
-            //Console.WriteLine("OUT2:  HELLO WORLD-");
             Console.WriteLine("  ");
             Console.WriteLine("  ");
-            Console.WriteLine("TEST OUT: " + message);
-            Console.WriteLine("OUT2:  TEST-");
+            Console.WriteLine("ToApp OUT: " + message);
         }
 
         public void FromAdmin(Message message, SessionID sessionID) 
         {
-            Console.WriteLine("IN (передача запроса на биржу):  " + message);
-            Console.WriteLine("IN2:  HELLO ADMIN-");
+            Console.WriteLine("FromAdmin IN (передача запроса на биржу):  " + message);
         }
 
         public void ToAdmin(Message message, SessionID sessionID)
         {
-            Console.WriteLine("OUT (ответ от биржи):  " + message);
-            Console.WriteLine("OUT2:  HELLO ADMIN-");
+            Console.WriteLine("ToAdmin OUT (ответ от биржи):  " + message);
         }
-
-        public void OnCreate(SessionID sessionID) { }
+        Session _session = null;
+        public void OnCreate(SessionID sessionID) {
+            
+        }
         public void OnLogout(SessionID sessionID) { }
         public void OnLogon(SessionID sessionID) { }
         #endregion

@@ -1,4 +1,5 @@
-// This is a generated file.  Don't edit it directly!
+
+// Это сгенерированный файл. Не редактируйте его напрямую!
 
 using QuickFix.Fields;
 namespace QuickFix
@@ -8,10 +9,11 @@ namespace QuickFix
         public class QuoteRequest : Message
         {
             public const string MsgType = "R";
+            /* MsgType = "R" - На некоторых рынках принято запрашивать котировки у брокеров до размещения заявки. */
 
             public QuoteRequest() : base()
             {
-                this.Header.SetField(new QuickFix.Fields.MsgType("R"));
+                this.Header.SetField(new QuickFix.Fields.MsgType("R"));                
             }
 
             public QuoteRequest(

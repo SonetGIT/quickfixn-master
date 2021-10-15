@@ -16,9 +16,9 @@ namespace QuickFix.Fields
         public const int BeginSeqNo = 7;
         public const int BeginString = 8; //Начало сообщения
         public const int BodyLength = 9; //Длина сообщения
-        public const int CheckSum = 10; //ggggggggg
-        public const int ClOrdID = 11; //ggggggggg
-        public const int Commission = 12;  //ggggggggg
+        public const int CheckSum = 10;
+        public const int ClOrdID = 11;
+        public const int Commission = 12;
         public const int CommType = 13;
         public const int CumQty = 14;
         public const int Currency = 15;
@@ -135,7 +135,7 @@ namespace QuickFix.Fields
         public const int DeliverToCompID = 128;
         public const int DeliverToSubID = 129;
         public const int IOINaturalFlag = 130;
-        public const int QuoteReqID = 131;
+        public const int QuoteReqID = 131; //котировка
         public const int BidPx = 132;
         public const int OfferPx = 133;
         public const int BidSize = 134;

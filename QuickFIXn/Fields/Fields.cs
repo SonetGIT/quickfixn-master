@@ -2681,7 +2681,6 @@ namespace QuickFix.Fields
             :base(Tags.QuoteReqID) {}
         public QuoteReqID(string val)
             :base(Tags.QuoteReqID, val) {}
-
     }
 
 
@@ -2696,7 +2695,6 @@ namespace QuickFix.Fields
             :base(Tags.BidPx) {}
         public BidPx(Decimal val)
             :base(Tags.BidPx, val) {}
-
     }
 
 
@@ -12690,19 +12688,20 @@ namespace QuickFix.Fields
 
 
         // Field Enumerations
-        public const int UNKNOWN_SYMBOL = 1;
-        public const int PASS = 10;
-        public const int EXCHANGE = 2;
-        public const int QUOTE_REQUEST_EXCEEDS_LIMIT = 3;
-        public const int TOO_LATE_TO_ENTER = 4;
-        public const int INVALID_PRICE = 5;
-        public const int NOT_AUTHORIZED_TO_REQUEST_QUOTE = 6;
-        public const int NO_MATCH_FOR_INQUIRY = 7;
-        public const int NO_MARKET_FOR_INSTRUMENT = 8;
-        public const int NO_INVENTORY = 9;
-        public const int OTHER = 99;
-        public const int INSUFFICIENT_CREDIT = 11;
-        public const int EXCHANGE_CLOSED = 2;
+        public const int UNKNOWN_SYMBOL = 1; //неизвестный символ = 1;
+        public const int PASS = 10; //pass = 10;
+        public const int EXCHANGE = 2; //обмен = 2;
+        public const int QUOTE_REQUEST_EXCEEDS_LIMIT = 3; //запрос цитаты превышает предел = 3;
+        public const int TOO_LATE_TO_ENTER = 4; //слишком поздно входить = 4;
+        public const int INVALID_PRICE = 5; //недействительная цена = 5;
+        public const int NOT_AUTHORIZED_TO_REQUEST_QUOTE = 6; //не разрешено запросить цитату = 6;
+        public const int NO_MATCH_FOR_INQUIRY = 7; //нет матча для запроса = 7;
+        public const int NO_MARKET_FOR_INSTRUMENT = 8; //нет рынка для инструментов = 8;
+        public const int NO_INVENTORY = 9; //нет инвентаря = 9;
+        public const int OTHER = 99; //other = 99;
+        public const int INSUFFICIENT_CREDIT = 11; //недостаточный кредит = 11;
+        public const int EXCHANGE_CLOSED = 2; //биржа закрыта = 2;
+        
     }
 
 
