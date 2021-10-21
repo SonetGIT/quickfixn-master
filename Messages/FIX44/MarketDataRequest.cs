@@ -1,5 +1,5 @@
-// This is a generated file.  Don't edit it directly!
 
+// Это сгенерированный файл. Не редактируйте его напрямую!
 using QuickFix.Fields;
 namespace QuickFix
 {

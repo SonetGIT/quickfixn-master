@@ -259,7 +259,7 @@ namespace SimpleAcceptor
                 
                 try
                 {
-                    sendToKse(new
+                    createSellBuyOrderToKse(new
                     {
                         organizationId = orgId,
                         financeInstrumentId = instrumentId,
@@ -324,24 +324,13 @@ namespace SimpleAcceptor
 
                 try
                 {
-                    createSellBuyOrderToKse(new
+                    var data = getQuotationsFromKse(instrumentCode);
+                    if (data != null && data.Length > 0)
                     {
-                        organizationId = orgId,
-                        financeInstrumentId = instrumentId,
-                        userId = userId,
-                        accountId,
-                        bidDirection,
-                        bidType,
-                        lots = new[]
-                    {
-                        new
-                        {
-                            price,
-                            amount
-                        }
+                        _session.Send(CreateMarketDataIncrementalRefresh44(instrumentCode, data));
                     }
-                    });
-                    _session.Send(CreateQuoteResponse44(instrumentCode));
+                    else
+                        Console.WriteLine("Котировки по данному инструменту отсутствуют");
                 }
                 catch (Exception e)
                 {
@@ -350,22 +339,92 @@ namespace SimpleAcceptor
             }
                 
         }
-        private QuickFix.FIX44.QuoteResponse CreateQuoteResponse44(string instrumentCode = "KGZSb")
+        //Генерация ответа на котировки
+        private QuickFix.FIX44.MarketDataIncrementalRefresh CreateMarketDataIncrementalRefresh44(string instrumentCode, responseQuoteItem._item[] data)
         {
             string qrid = new Random().Next(111111111, 999999999).ToString();
             QuickFix.Fields.QuoteRespID QuoteRespID = new QuickFix.Fields.QuoteRespID(qrid);
             QuickFix.Fields.QuoteRespType quoteRespType = new QuickFix.Fields.QuoteRespType(QuoteRespType.HIT_LIFT);
 
             // create QuoteRequest instance
-            QuickFix.FIX44.QuoteResponse message = new QuickFix.FIX44.QuoteResponse(QuoteRespID, quoteRespType, new QuickFix.Fields.Symbol(instrumentCode));
+            QuickFix.FIX44.MarketDataIncrementalRefresh message = new QuickFix.FIX44.MarketDataIncrementalRefresh();
+
+            MDReqID mdreqid = new MDReqID();
+            //Количество записей в сообщении с рыночными данными.
+            NoMDEntries nomdentries = new NoMDEntries();
+            QuickFix.FIX44.MarketDataIncrementalRefresh.NoMDEntriesGroup group = new QuickFix.FIX44.MarketDataIncrementalRefresh.NoMDEntriesGroup();
+            DeleteReason deletereason = new DeleteReason();
+
+            int list = nomdentries.getValue();
+
+            for (uint i = 0; i < data.Length; i++)
+            {
+                var dataItem = data[i];
+                var gr = new QuickFix.FIX44.MarketDataIncrementalRefresh.NoMDEntriesGroup();
+                MDUpdateAction mdupdateaction = new MDUpdateAction('0');
+                gr.Set(mdupdateaction);
+                /*if (mdupdateaction.getValue() == '2')
+                    Console.WriteLine("Enter");*/
+                //group.get(deletereason);
+                MDEntryType mdentrytype = new MDEntryType();
+                if(dataItem.leadingNo != null) //SELL = Offer(1)
+                {
+                    mdentrytype.setValue('1');
+                }
+                else if (dataItem.trailingNo != null) //BUY = Bid(0)
+                {
+                    mdentrytype.setValue('0');
+                }
+                gr.Set(mdentrytype);
+
+                MDEntryID mdentryid = new MDEntryID((i+1).ToString());
+                gr.Set(mdentryid);
+
+                Symbol symbol = new Symbol(instrumentCode);
+                gr.Set(symbol);
+
+                //Автор ввода рыночных данных
+                MDEntryOriginator mdentryoriginator = new MDEntryOriginator();
+                gr.Set(mdentryoriginator);
+
+                //Цена ввода рыночных данных.
+                MDEntryPx mdentrypx = new MDEntryPx();
+                if (mdupdateaction.getValue() == '0')
+                    gr.Set(mdentrypx);
+
+                Currency currency = new Currency();
+                    gr.Set(currency);
+
+                //Количество акций, представленных вводом рыночных данных.
+                MDEntrySize mdentrysize = new MDEntrySize();
+                if (mdupdateaction.getValue() == '0')
+                    gr.Set(mdentrysize);
+                gr.AddGroup(group);
+
+                /*Дата истечения срока действия ордера (последний день, когда ордер может торговать).*/
+                ExpireDate expiredate = new ExpireDate();
+
+                //Время / дата истечения срока действия заказа(всегда выражается в UTC (всемирное координированное время, также известное как «GMT»)
+                ExpireTime expiretime = new ExpireTime();
+
+                //Количество ордеров на рынке
+                NumberOfOrders numberoforders = new NumberOfOrders();
+
+                //Отображение позиции заявки или предложения
+                MDEntryPositionNo mdentrypositionno = new MDEntryPositionNo();
+            }
+
+            message.Set(nomdentries);
+            message.AddGroup(group);
+
 
             // Symbol, OrderQty and Account are in a repeating groups
-            /*QuickFix.Group group = new QuickFix.Group(QuickFix.Fields.Tags.NoRelatedSym, QuickFix.Fields.Tags.Symbol);
+            //QuickFix.Group group = new QuickFix.Group(QuickFix.Fields.Tags.NoRelatedSym, QuickFix.Fields.Tags.Symbol);
             group.SetField(new QuickFix.Fields.Symbol(instrumentCode));
             group.SetField(new QuickFix.Fields.OrderQty(500));
-            group.SetField(new QuickFix.Fields.Account(accountNo));
+            //group.SetField();
 
-            message.AddGroup(group);*/
+            message.AddGroup(group);
 
             return message;
         }
@@ -399,6 +458,36 @@ namespace SimpleAcceptor
             }
         }
 
+        private responseQuoteItem._item[] getQuotationsFromKse(string instrumentCode)
+        {
+            var quoteURL = "http://192.168.2.150:5002/api/Trading/GetInstrumentQuotation?instrumentCode=" + instrumentCode;
+            HttpClient client = new HttpClient();
+            //client.DefaultRequestHeaders.Accept.Clear();
+            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            var response = client.GetAsync(quoteURL).GetAwaiter().GetResult();
+            try
+            {
+                response.EnsureSuccessStatusCode();
+                var res = JsonConvert.DeserializeObject<responseQuoteItem>(response.Content.ReadAsStringAsync().GetAwaiter().GetResult());
+                if (res.isSuccess)
+                {
+                    Console.WriteLine("  ");
+                    Console.WriteLine("getQuotationsFromKse OUT (ответ от биржи): Данные котировок из ТС");
+                    return res.data;
+                }
+                else
+                {
+                    if (res.errors != null && res.errors.Length > 0)
+                        Console.WriteLine("Ваша запрос на котировки не принят ТС из-за причины: " + res.errors[0]);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Ваш запрос не доставлен в ТС из-за причины: " + response.StatusCode.ToString());
+            }
+            return null;
+        }
+
         public void ToApp(Message message, SessionID sessionID)
         {
             Console.WriteLine("  ");
@@ -427,5 +516,21 @@ namespace SimpleAcceptor
     {
         public bool isSuccess { get; set; }
         public string[] errors { get; set; }
+    }
+
+    public class responseQuoteItem : responseObj
+    {
+     
+        public _item[] data { get; set; }
+        public class _item
+        {
+            public int? leadingNo { get; set; }
+            public double? sellAmount { get; set; }
+            public double? sellPrice { get; set; }
+
+            public int? trailingNo { get; set; }
+            public double? buyAmount { get; set; }
+            public double? buyPrice { get; set; }
+        }
     }
 }

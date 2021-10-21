@@ -262,7 +262,7 @@ namespace TradeClient
             Console.WriteLine("Полученный заказ отменить/отклонить");
         }
 
-        public void OnMessage(QuickFix.FIX44.QuoteResponse m, SessionID s)
+        public void OnMessage(QuickFix.FIX44.MarketDataIncrementalRefresh m, SessionID s)
         {
             //Console.WriteLine("Received order cancel reject");
             Console.WriteLine("!!!Получен запрос на котировки!!!!!!");
@@ -358,7 +358,7 @@ namespace TradeClient
                 + "1) Ввод заявки\n"
                 + "2) Отменить заявку\n"
                 + "3) Заменить заявку\n"
-                //+ "4) Тест рыночных данных\n"
+                + "4) Котировка\n"
                 + "Q) Выход\n"
                 + "Действие:"
             );

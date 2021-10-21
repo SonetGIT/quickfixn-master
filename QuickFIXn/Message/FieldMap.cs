@@ -32,7 +32,6 @@ namespace QuickFix
             _fieldOrder = fieldOrd;
         }
 
-
         /// <summary>
         /// FIXME this should probably make a deeper copy
         /// </summary>

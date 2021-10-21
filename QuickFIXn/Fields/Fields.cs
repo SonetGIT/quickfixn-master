@@ -63,7 +63,7 @@ namespace QuickFix.Fields
             :base(Tags.AdvSide, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char BUY = 'B';
         public const char SELL = 'S';
         public const char TRADE = 'T';
@@ -84,7 +84,7 @@ namespace QuickFix.Fields
             :base(Tags.AdvTransType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string CANCEL = "C";
         public const string NEW = "N";
         public const string REPLACE = "R";
@@ -209,7 +209,7 @@ namespace QuickFix.Fields
             :base(Tags.CommType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char PER_UNIT = '1';
         public const char PERCENT = '2';
         public const char ABSOLUTE = '3';
@@ -298,7 +298,7 @@ namespace QuickFix.Fields
             :base(Tags.ExecInst, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string STAY_ON_OFFER_SIDE = "0";
         public const string NOT_HELD = "1";
         public const string WORK = "2";
@@ -397,7 +397,7 @@ namespace QuickFix.Fields
             :base(Tags.ExecTransType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char NEW = '0';
         public const char CANCEL = '1';
         public const char CORRECT = '2';
@@ -418,7 +418,7 @@ namespace QuickFix.Fields
             :base(Tags.HandlInst, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char AUTOMATED_EXECUTION_ORDER_PRIVATE_NO_BROKER_INTERVENTION = '1'; //автоматическое исполнение заказа частное без вмешательства брокера
         public const char AUTOMATED_EXECUTION_ORDER_PUBLIC_BROKER_INTERVENTION_OK = '2'; //вмешательство общественного брокера автоматического исполнения заказа ок
         public const char MANUAL_ORDER_BEST_EXECUTION = '3'; //ручной заказ наилучшее исполнение
@@ -441,7 +441,7 @@ namespace QuickFix.Fields
             :base(Tags.IDSource, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string CUSIP = "1";
         public const string SEDOL = "2";
         public const string QUIK = "3";
@@ -497,7 +497,7 @@ namespace QuickFix.Fields
             :base(Tags.IOIQltyInd, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char HIGH = 'H';
         public const char LOW = 'L';
         public const char MEDIUM = 'M';
@@ -547,7 +547,7 @@ namespace QuickFix.Fields
             :base(Tags.IOITransType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char CANCEL = 'C';
         public const char NEW = 'N';
         public const char REPLACE = 'R';
@@ -567,7 +567,7 @@ namespace QuickFix.Fields
             :base(Tags.LastCapacity, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char AGENT = '1';
         public const char CROSS_AS_AGENT = '2';
         public const char CROSS_AS_PRINCIPAL = '3';
@@ -663,7 +663,7 @@ namespace QuickFix.Fields
             :base(Tags.MsgType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string HEARTBEAT = "0"; //Сообщение для поддержания связи.
         public const string TESTREQUEST = "1"; //Сообщение для поддержания связи. Запрос второй стороны, жива ли первая
         public const string RESENDREQUEST = "2"; //Повторный запрос сообщений, в случае утери. Задается интервал номеров сообщений.
@@ -948,7 +948,7 @@ namespace QuickFix.Fields
             :base(Tags.OrdStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char NEW = '0';
         public const char PARTIALLY_FILLED = '1';
         public const char FILLED = '2';
@@ -981,7 +981,7 @@ namespace QuickFix.Fields
             :base(Tags.OrdType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char MARKET = '1';
         public const char LIMIT = '2';
         public const char STOP = '3';
@@ -1058,7 +1058,7 @@ namespace QuickFix.Fields
             :base(Tags.PossDupFlag, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
         public const Boolean POSSIBLE_DUPLICATE = true;
@@ -1124,7 +1124,7 @@ namespace QuickFix.Fields
             :base(Tags.Rule80A, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char AGENCY_SINGLE_ORDER = 'A';
         public const char SHORT_EXEMPT_TRANSACTION_B = 'B';
         public const char PROPRIETARY_NON_ALGORITHMIC_PROGRAM_TRADE = 'C';
@@ -1270,7 +1270,7 @@ namespace QuickFix.Fields
             :base(Tags.Side, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char BUY = '1';
         public const char SELL = '2';
         public const char BUY_MINUS = '3';
@@ -1365,7 +1365,7 @@ namespace QuickFix.Fields
             :base(Tags.TimeInForce, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char DAY = '0';
         public const char GOOD_TILL_CANCEL = '1';
         public const char AT_THE_OPENING = '2';
@@ -1411,7 +1411,7 @@ namespace QuickFix.Fields
             :base(Tags.Urgency, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char NORMAL = '0';
         public const char FLASH = '1';
         public const char BACKGROUND = '2';
@@ -1450,7 +1450,7 @@ namespace QuickFix.Fields
             :base(Tags.SettlmntTyp, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char REGULAR = '0';
         public const char CASH = '1';
         public const char NEXT_DAY = '2';
@@ -1498,7 +1498,7 @@ namespace QuickFix.Fields
             :base(Tags.SymbolSfx, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string EUCP_WITH_LUMP_SUM_INTEREST_RATHER_THAN_DISCOUNT_PRICE = "CD";
         public const string WHEN_ISSUED_FOR_A_SECURITY_TO_BE_REISSUED_UNDER_AN_OLD_CUSIP_OR_ISIN = "WI";
         public const string WHEN_ISSUED = "WI";
@@ -1594,7 +1594,7 @@ namespace QuickFix.Fields
             :base(Tags.AllocTransType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char NEW = '0';
         public const char REPLACE = '1';
         public const char CANCEL = '2';
@@ -1693,7 +1693,7 @@ namespace QuickFix.Fields
             :base(Tags.OpenClose, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char OPEN = 'O';
         public const char CLOSE = 'C';
     }
@@ -1757,7 +1757,7 @@ namespace QuickFix.Fields
             :base(Tags.ProcessCode, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char REGULAR = '0';
         public const char SOFT_DOLLAR = '1';
         public const char STEP_IN = '2';
@@ -1860,7 +1860,7 @@ namespace QuickFix.Fields
             :base(Tags.AllocStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ACCEPTED = 0;
         public const int BLOCK_LEVEL_REJECT = 1;
         public const int ACCOUNT_LEVEL_REJECT = 2;
@@ -1887,7 +1887,7 @@ namespace QuickFix.Fields
             :base(Tags.AllocRejCode, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int UNKNOWN_ACCOUNT = 0;
         public const int INCORRECT_QUANTITY = 1;
         public const int UNKNOWN_OR_STALE_EXECID = 10;
@@ -1998,7 +1998,7 @@ namespace QuickFix.Fields
             :base(Tags.EmailType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char NEW = '0';
         public const char REPLY = '1';
         public const char ADMIN_REPLY = '2';
@@ -2048,7 +2048,7 @@ namespace QuickFix.Fields
             :base(Tags.PossResend, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
     }
@@ -2067,7 +2067,7 @@ namespace QuickFix.Fields
             :base(Tags.EncryptMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NONE = 0;
         public const int PKCS_1 = 1;
         public const int DES = 2;
@@ -2117,7 +2117,7 @@ namespace QuickFix.Fields
             :base(Tags.ExDestination, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string NONE = "0";
         public const string POSIT = "4";
     }
@@ -2136,7 +2136,7 @@ namespace QuickFix.Fields
             :base(Tags.CxlRejReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int TOO_LATE_TO_CANCEL = 0;
         public const int UNKNOWN_ORDER = 1;
         public const int BROKER = 2;
@@ -2169,7 +2169,7 @@ namespace QuickFix.Fields
             :base(Tags.OrdRejReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int BROKER = 0;
         public const int UNKNOWN_SYMBOL = 1;
         public const int INVALID_INVESTOR_ID = 10;
@@ -2209,7 +2209,7 @@ namespace QuickFix.Fields
             :base(Tags.IOIQualifier, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char ALL_OR_NONE = 'A';
         public const char MARKET_ON_CLOSE = 'B';
         public const char AT_THE_CLOSE = 'C';
@@ -2368,7 +2368,7 @@ namespace QuickFix.Fields
             :base(Tags.ReportToExch, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
     }
@@ -2387,7 +2387,7 @@ namespace QuickFix.Fields
             :base(Tags.LocateReqd, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
     }
@@ -2496,7 +2496,7 @@ namespace QuickFix.Fields
             :base(Tags.ForexReq, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
     }
@@ -2534,7 +2534,7 @@ namespace QuickFix.Fields
             :base(Tags.GapFillFlag, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
         public const Boolean GAP_FILL_MESSAGE_MSGSEQNUM_FIELD_VALID = true;
@@ -2570,7 +2570,7 @@ namespace QuickFix.Fields
             :base(Tags.CxlType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char PARTIAL_CANCEL = 'P';
         public const char FULL_REMAINING_QUANTITY = 'F';
     }
@@ -2608,7 +2608,7 @@ namespace QuickFix.Fields
             :base(Tags.DKReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char UNKNOWN_SYMBOL = 'A';
         public const char WRONG_SIDE = 'B';
         public const char QUANTITY_EXCEEDS_ORDER = 'C';
@@ -2662,7 +2662,7 @@ namespace QuickFix.Fields
             :base(Tags.IOINaturalFlag, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
         public const Boolean NATURAL = true;
@@ -2801,7 +2801,7 @@ namespace QuickFix.Fields
             :base(Tags.MiscFeeType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string REGULATORY = "1";
         public const string PER_TRANSACTION = "10";
         public const string CONVERSION = "11";
@@ -2847,7 +2847,7 @@ namespace QuickFix.Fields
             :base(Tags.ResetSeqNumFlag, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
         public const Boolean YES_RESET_SEQUENCE_NUMBERS = true;
@@ -2987,7 +2987,7 @@ namespace QuickFix.Fields
             :base(Tags.ExecType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char NEW = '0';
         public const char DONE_FOR_DAY = '3';
         public const char CANCELED = '4';
@@ -3104,7 +3104,7 @@ namespace QuickFix.Fields
             :base(Tags.SettlCurrFxRateCalc, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char MULTIPLY = 'M';
         public const char DIVIDE = 'D';
     }
@@ -3168,7 +3168,7 @@ namespace QuickFix.Fields
             :base(Tags.SettlInstMode, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char DEFAULT = '0';
         public const char STANDING_INSTRUCTIONS_PROVIDED = '1';
         public const char SPECIFIC_ALLOCATION_ACCOUNT_OVERRIDING = '2';
@@ -3221,7 +3221,7 @@ namespace QuickFix.Fields
             :base(Tags.SettlInstTransType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char CANCEL = 'C';
         public const char NEW = 'N';
         public const char REPLACE = 'R';
@@ -3257,7 +3257,7 @@ namespace QuickFix.Fields
             :base(Tags.SettlInstSource, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char BROKERS_INSTRUCTIONS = '1';
         public const char INSTITUTIONS_INSTRUCTIONS = '2';
         public const char INVESTOR = '3';
@@ -3279,7 +3279,7 @@ namespace QuickFix.Fields
             :base(Tags.SettlLocation, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string CEDEL = "CED";
         public const string DEPOSITORY_TRUST_COMPANY = "DTC";
         public const string EURO_CLEAR = "EUR";
@@ -3305,7 +3305,7 @@ namespace QuickFix.Fields
             :base(Tags.SecurityType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string ASSET_BACKED_SECURITIES = "ABS";
         public const string AMENDED_RESTATED = "AMENDED";
         public const string OTHER_ANTICIPATION_NOTES = "AN";
@@ -3488,7 +3488,7 @@ namespace QuickFix.Fields
             :base(Tags.StandInstDbType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int OTHER = 0;
         public const int DTC_SID = 1;
         public const int THOMSON_ALERT = 2;
@@ -3540,7 +3540,7 @@ namespace QuickFix.Fields
             :base(Tags.SettlDeliveryType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int VERSUS_PAYMENT_DELIVER = 0;
         public const int FREE_DELIVER = 1;
         public const int TRI_PARTY = 2;
@@ -3923,7 +3923,7 @@ namespace QuickFix.Fields
             :base(Tags.AllocLinkType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int FX_NETTING = 0;
         public const int FX_SWAP = 1;
         public const int F_X_NETTING = 0;
@@ -3989,7 +3989,7 @@ namespace QuickFix.Fields
             :base(Tags.PutOrCall, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PUT = 0;
         public const int CALL = 1;
     }
@@ -4023,7 +4023,7 @@ namespace QuickFix.Fields
             :base(Tags.CoveredOrUncovered, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int COVERED = 0;
         public const int UNCOVERED = 1;
     }
@@ -4042,7 +4042,7 @@ namespace QuickFix.Fields
             :base(Tags.CustomerOrFirm, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int CUSTOMER = 0;
         public const int FIRM = 1;
     }
@@ -4106,7 +4106,7 @@ namespace QuickFix.Fields
             :base(Tags.NotifyBrokerOfCredit, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
         public const Boolean DETAILS_SHOULD_BE_COMMUNICATED = true;
@@ -4127,7 +4127,7 @@ namespace QuickFix.Fields
             :base(Tags.AllocHandlInst, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int MATCH = 1;
         public const int FORWARD = 2;
         public const int FORWARD_AND_MATCH = 3;
@@ -4252,7 +4252,7 @@ namespace QuickFix.Fields
             :base(Tags.RoutingType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int TARGET_FIRM = 1;
         public const int TARGET_LIST = 2;
         public const int BLOCK_FIRM = 3;
@@ -4303,7 +4303,7 @@ namespace QuickFix.Fields
             :base(Tags.Benchmark, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char CURVE = '1';
         public const char VAL_5YR = '2';
         public const char OLD5 = '3';
@@ -4379,7 +4379,7 @@ namespace QuickFix.Fields
             :base(Tags.SubscriptionRequestType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char SNAPSHOT = '0';
         public const char SNAPSHOT_PLUS_UPDATES = '1';
         public const char DISABLE_PREVIOUS_SNAPSHOT_PLUS_UPDATE_REQUEST = '2';
@@ -4415,7 +4415,7 @@ namespace QuickFix.Fields
             :base(Tags.MDUpdateType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int FULL_REFRESH = 0;
         public const int INCREMENTAL_REFRESH = 1;
     }
@@ -4434,7 +4434,7 @@ namespace QuickFix.Fields
             :base(Tags.AggregatedBook, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean YES = true;
         public const Boolean NO = false;
         public const Boolean ONE_BOOK_ENTRY_PER_SIDE_PER_PRICE = true;
@@ -4485,7 +4485,7 @@ namespace QuickFix.Fields
             :base(Tags.MDEntryType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char BID = '0';
         public const char OFFER = '1';
         public const char TRADE = '2';
@@ -4602,7 +4602,7 @@ namespace QuickFix.Fields
             :base(Tags.TickDirection, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char PLUS_TICK = '0';
         public const char ZERO_PLUS_TICK = '1';
         public const char MINUS_TICK = '2';
@@ -4640,7 +4640,7 @@ namespace QuickFix.Fields
             :base(Tags.QuoteCondition, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string OPEN_ACTIVE = "A";
         public const string CLOSED_INACTIVE = "B";
         public const string EXCHANGE_BEST = "C";
@@ -4720,7 +4720,7 @@ namespace QuickFix.Fields
             :base(Tags.TradeCondition, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string CASH = "A";
         public const string AVERAGE_PRICE_TRADE = "B";
         public const string CASH_TRADE = "C";
@@ -4834,7 +4834,7 @@ namespace QuickFix.Fields
             :base(Tags.MDUpdateAction, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char NEW = '0';
         public const char CHANGE = '1';
         public const char DELETE = '2';
@@ -4872,7 +4872,7 @@ namespace QuickFix.Fields
             :base(Tags.MDReqRejReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char UNKNOWN_SYMBOL = '0';
         public const char DUPLICATE_MDREQID = '1';
         public const char INSUFFICIENT_BANDWIDTH = '2';
@@ -4948,7 +4948,7 @@ namespace QuickFix.Fields
             :base(Tags.DeleteReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char CANCELLATION = '0';
         public const char ERROR = '1';
         public const char CANCELATION_TRADE_BUST = '0';
@@ -4969,7 +4969,7 @@ namespace QuickFix.Fields
             :base(Tags.OpenCloseSettleFlag, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string DAILY_OPEN = "0";
         public const string SESSION_OPEN = "1";
         public const string DELIVERY_SETTLEMENT_PRICE = "2";
@@ -5053,7 +5053,7 @@ namespace QuickFix.Fields
             :base(Tags.FinancialStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string BANKRUPT = "1";
         public const string PENDING_DELISTING = "2";
         public const string RESTRICTED = "3";
@@ -5073,7 +5073,7 @@ namespace QuickFix.Fields
             :base(Tags.CorporateAction, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string EX_DIVIDEND = "A";
         public const string EX_DISTRIBUTION = "B";
         public const string EX_RIGHTS = "C";
@@ -5184,6 +5184,7 @@ namespace QuickFix.Fields
     /// </summary>/
     public sealed class QuoteCancelType : IntField
     {
+        //Тип отмены котировок
         public const int TAG = 298;
 
         public QuoteCancelType()
@@ -5192,40 +5193,39 @@ namespace QuickFix.Fields
             :base(Tags.QuoteCancelType, val) {}
 
 
-        // Field Enumerations
-        public const int CANCEL_FOR_ONE_OR_MORE_SECURITIES = 1;
-        public const int CANCEL_FOR_SECURITY_TYPE = 2;
-        public const int CANCEL_FOR_UNDERLYING_SECURITY = 3;
-        public const int CANCEL_ALL_QUOTES = 4;
-        public const int CANCEL_QUOTE_SPECIFIED_IN_QUOTEID = 5;
-        public const int CANCEL_BY_QUOTETYPE = 6;
-        public const int CANCEL_FOR_SECURITY_ISSUER = 7;
-        public const int CANCEL_FOR_ISSUER_OF_UNDERLYING_SECURITY = 8;
-        public const int CANCEL_FOR_SYMBOL = 1;
-        public const int CANCEL_FOR_UNDERLYING_SYMBOL = 3;
+        // Перечисления полей
+        public const int CANCEL_FOR_ONE_OR_MORE_SECURITIES = 1; //отмена для одной или нескольких ценных бумаг = 1;
+        public const int CANCEL_FOR_SECURITY_TYPE = 2; //отмена для типа безопасности = 2;
+        public const int CANCEL_FOR_UNDERLYING_SECURITY = 3; //отмена по безопасности = 3;
+        public const int CANCEL_ALL_QUOTES = 4; //отменить все цитаты = 4;
+        public const int CANCEL_QUOTE_SPECIFIED_IN_QUOTEID = 5; //отмена цитаты, указанной в quoteid = 5;
+        public const int CANCEL_BY_QUOTETYPE = 6; //отмена по quotetype = 6;
+        public const int CANCEL_FOR_SECURITY_ISSUER = 7; //отмена для эмитента безопасности = 7;
+        public const int CANCEL_FOR_ISSUER_OF_UNDERLYING_SECURITY = 8; //отмена эмитента безопасной безопасности = 8;
+        public const int CANCEL_FOR_SYMBOL = 1; //отмена для символа = 1;
+        public const int CANCEL_FOR_UNDERLYING_SYMBOL = 3; //отмена для нижнего символа = 3;
     }
-
 
     /// <summary>
     /// QuoteEntryID Field
     /// </summary>/
     public sealed class QuoteEntryID : StringField
     {
+        //Идентификатор записи котировок
         public const int TAG = 299;
 
         public QuoteEntryID()
             :base(Tags.QuoteEntryID) {}
         public QuoteEntryID(string val)
             :base(Tags.QuoteEntryID, val) {}
-
     }
-
 
     /// <summary>
     /// QuoteRejectReason Field
     /// </summary>/
-    public sealed class QuoteRejectReason : IntField
+    public sealed class QuoteRejectReason : IntField  
     {
+        //Причина отклонения котировок
         public const int TAG = 300;
 
         public QuoteRejectReason()
@@ -5234,25 +5234,24 @@ namespace QuickFix.Fields
             :base(Tags.QuoteRejectReason, val) {}
 
 
-        // Field Enumerations
-        public const int UNKNOWN_SYMBOL = 1;
-        public const int EXCHANGE = 2;
-        public const int QUOTE_REQUEST_EXCEEDS_LIMIT = 3;
-        public const int TOO_LATE_TO_ENTER = 4;
-        public const int UNKNOWN_QUOTE = 5;
-        public const int DUPLICATE_QUOTE = 6;
-        public const int INVALID_BID_ASK_SPREAD = 7;
-        public const int INVALID_PRICE = 8;
-        public const int NOT_AUTHORIZED_TO_QUOTE_SECURITY = 9;
-        public const int OTHER = 99;
-        public const int PRICE_EXCEEDS_CURRENT_PRICE_BAND = 10;
-        public const int QUOTE_LOCKED = 11;
-        public const int INVALID_OR_UNKNOWN_SECURITY_ISSUER = 12;
-        public const int INVALID_OR_UNKNOWN_ISSUER_OF_UNDERLYING_SECURITY = 13;
-        public const int EXCHANGE_CLOSED = 2;
-        public const int DUPLICATE_QUOTE_7 = 6;
+        // Перечисления полей
+        public const int UNKNOWN_SYMBOL = 1; //неизвестный символ = 1;
+        public const int EXCHANGE = 2; //обмен = 2;
+        public const int QUOTE_REQUEST_EXCEEDS_LIMIT = 3; //запрос котировки превышает предел = 3;
+        public const int TOO_LATE_TO_ENTER = 4; //слишком поздно входить = 4;
+        public const int UNKNOWN_QUOTE = 5; //неизвестная котировка = 5;
+        public const int DUPLICATE_QUOTE = 6; //двойная котировка = 6;
+        public const int INVALID_BID_ASK_SPREAD = 7; //неверный спред запроса = 7;
+        public const int INVALID_PRICE = 8; //недействительная цена = 8;
+        public const int NOT_AUTHORIZED_TO_QUOTE_SECURITY = 9; //не разрешено котировать безопасность = 9;
+        public const int OTHER = 99; //другие = 99;
+        public const int PRICE_EXCEEDS_CURRENT_PRICE_BAND = 10; //цена превышает текущую цену = 10;
+        public const int QUOTE_LOCKED = 11; //котировка заблокирована = 11;
+        public const int INVALID_OR_UNKNOWN_SECURITY_ISSUER = 12; //недействительный или неизвестный эмитент безопасности = 12;
+        public const int INVALID_OR_UNKNOWN_ISSUER_OF_UNDERLYING_SECURITY = 13; //недействительный или неизвестный эмитент безопасности = 13;
+        public const int EXCHANGE_CLOSED = 2; //биржа закрыта = 2;
+        public const int DUPLICATE_QUOTE_7 = 6; //двойная котировка 7 = 6;
     }
-
 
     /// <summary>
     /// QuoteResponseLevel Field
@@ -5267,14 +5266,13 @@ namespace QuickFix.Fields
             :base(Tags.QuoteResponseLevel, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NO_ACKNOWLEDGEMENT = 0;
         public const int ACKNOWLEDGE_ONLY_NEGATIVE_OR_ERRONEOUS_QUOTES = 1;
         public const int ACKNOWLEDGE_EACH_QUOTE_MESSAGE = 2;
         public const int SUMMARY_ACKNOWLEDGEMENT = 3;
         public const int ACKNOWLEDGE_EACH_QUOTE_MESSAGES = 2;
     }
-
 
     /// <summary>
     /// QuoteSetID Field
@@ -5290,7 +5288,6 @@ namespace QuickFix.Fields
 
     }
 
-
     /// <summary>
     /// QuoteRequestType Field
     /// </summary>/
@@ -5304,7 +5301,7 @@ namespace QuickFix.Fields
             :base(Tags.QuoteRequestType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int MANUAL = 1;
         public const int AUTOMATIC = 2;
     }
@@ -5488,7 +5485,7 @@ namespace QuickFix.Fields
             :base(Tags.UnderlyingPutOrCall, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PUT = 0;
         public const int CALL = 1;
     }
@@ -5582,7 +5579,7 @@ namespace QuickFix.Fields
             :base(Tags.SecurityRequestType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int REQUEST_SECURITY_IDENTITY_AND_SPECIFICATIONS = 0;
         public const int REQUEST_SECURITY_IDENTITY_FOR_THE_SPECIFICATIONS_PROVIDED = 1;
         public const int REQUEST_LIST_SECURITY_TYPES = 2;
@@ -5624,7 +5621,7 @@ namespace QuickFix.Fields
             :base(Tags.SecurityResponseType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ACCEPT_SECURITY_PROPOSAL_AS_IS = 1;
         public const int ACCEPT_SECURITY_PROPOSAL_WITH_REVISIONS_AS_INDICATED_IN_THE_MESSAGE = 2;
         public const int LIST_OF_SECURITY_TYPES_RETURNED_PER_REQUEST = 3;
@@ -5663,7 +5660,7 @@ namespace QuickFix.Fields
             :base(Tags.UnsolicitedIndicator, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
         public const Boolean MESSAGE_IS_BEING_SENT_UNSOLICITED = true;
@@ -5684,7 +5681,7 @@ namespace QuickFix.Fields
             :base(Tags.SecurityTradingStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int OPENING_DELAY = 1;
         public const int MARKET_ON_CLOSE_IMBALANCE_SELL = 10;
         public const int VAL_11 = 11;
@@ -5733,7 +5730,7 @@ namespace QuickFix.Fields
             :base(Tags.HaltReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char ORDER_IMBALANCE = 'I';
         public const char EQUIPMENT_CHANGEOVER = 'X';
         public const char NEWS_PENDING = 'P';
@@ -5756,7 +5753,7 @@ namespace QuickFix.Fields
             :base(Tags.InViewOfCommon, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
         public const Boolean HALT_WAS_DUE_TO_COMMON_STOCK_BEING_HALTED = true;
@@ -5777,7 +5774,7 @@ namespace QuickFix.Fields
             :base(Tags.DueToRelated, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
         public const Boolean HALT_WAS_DUE_TO_RELATED_SECURITY_BEING_HALTED = true;
@@ -5858,7 +5855,7 @@ namespace QuickFix.Fields
             :base(Tags.Adjustment, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int CANCEL = 1;
         public const int ERROR = 2;
         public const int CORRECTION = 3;
@@ -5893,7 +5890,7 @@ namespace QuickFix.Fields
             :base(Tags.TradingSessionID, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string DAY = "1";
         public const string HALFDAY = "2";
         public const string MORNING = "3";
@@ -5931,7 +5928,7 @@ namespace QuickFix.Fields
             :base(Tags.TradSesMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ELECTRONIC = 1;
         public const int OPEN_OUTCRY = 2;
         public const int TWO_PARTY = 3;
@@ -5951,7 +5948,7 @@ namespace QuickFix.Fields
             :base(Tags.TradSesMode, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int TESTING = 1;
         public const int SIMULATED = 2;
         public const int PRODUCTION = 3;
@@ -5971,7 +5968,7 @@ namespace QuickFix.Fields
             :base(Tags.TradSesStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int UNKNOWN = 0;
         public const int HALTED = 1;
         public const int OPEN = 2;
@@ -6107,7 +6104,7 @@ namespace QuickFix.Fields
             :base(Tags.MessageEncoding, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string ISO_2022_JP = "ISO-2022-JP";
         public const string EUC_JP = "EUC-JP";
         public const string SHIFT_JIS = "SHIFT_JIS";
@@ -6432,7 +6429,7 @@ namespace QuickFix.Fields
             :base(Tags.QuoteEntryRejectReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int UNKNOWN_SYMBOL = 1;
         public const int EXHCNAGE = 2;
         public const int QUOTE_EXCEEDS_LIMIT = 3;
@@ -6527,7 +6524,7 @@ namespace QuickFix.Fields
             :base(Tags.SessionRejectReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int INVALID_TAG_NUMBER = 0;
         public const int REQUIRED_TAG_MISSING = 1;
         public const int SENDINGTIME_ACCURACY_PROBLEM = 10;
@@ -6565,7 +6562,7 @@ namespace QuickFix.Fields
             :base(Tags.BidRequestTransType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char CANCEL = 'C';
         public const char NO = 'N';
         public const char NEW = 'N';
@@ -6615,7 +6612,7 @@ namespace QuickFix.Fields
             :base(Tags.SolicitedFlag, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
         public const Boolean WAS_SOLCITIED = true;
@@ -6636,7 +6633,7 @@ namespace QuickFix.Fields
             :base(Tags.ExecRestatementReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int GT_CORPORATE_ACTION = 0;
         public const int GT_RENEWAL = 1;
         public const int WAREHOUSE_RECAP = 10;
@@ -6683,7 +6680,7 @@ namespace QuickFix.Fields
             :base(Tags.BusinessRejectReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int OTHER = 0;
         public const int UNKNOWN_ID = 1;
         public const int UNKNOWN_SECURITY = 2;
@@ -6771,7 +6768,7 @@ namespace QuickFix.Fields
             :base(Tags.MsgDirection, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char RECEIVE = 'R';
         public const char SEND = 'S';
     }
@@ -6820,7 +6817,7 @@ namespace QuickFix.Fields
             :base(Tags.DiscretionInst, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char RELATED_TO_DISPLAYED_PRICE = '0';
         public const char RELATED_TO_MARKET_PRICE = '1';
         public const char RELATED_TO_PRIMARY_PRICE = '2';
@@ -6920,7 +6917,7 @@ namespace QuickFix.Fields
             :base(Tags.BidType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NON_DISCLOSED_STYLE = 1;
         public const int DISCLOSED_SYTLE = 2;
         public const int NO_BIDDING_PROCESS = 3;
@@ -7002,7 +6999,7 @@ namespace QuickFix.Fields
             :base(Tags.BidDescriptorType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SECTOR = 1;
         public const int COUNTRY = 2;
         public const int INDEX = 3;
@@ -7037,7 +7034,7 @@ namespace QuickFix.Fields
             :base(Tags.SideValueInd, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SIDE_VALUE_1 = 1;
         public const int SIDE_VALUE_2 = 2;
         public const int SIDEVALUE1 = 1;
@@ -7164,7 +7161,7 @@ namespace QuickFix.Fields
             :base(Tags.LiquidityIndType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int VAL_5_DAY_MOVING_AVERAGE = 1;
         public const int VAL_20_DAY_MOVING_AVERAGE = 2;
         public const int NORMAL_MARKET_SIZE = 3;
@@ -7202,7 +7199,7 @@ namespace QuickFix.Fields
             :base(Tags.ExchangeForPhysical, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
         public const Boolean TRUE = true;
@@ -7253,7 +7250,7 @@ namespace QuickFix.Fields
             :base(Tags.ProgRptReqs, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int BUY_SIDE_EXPLICITLY_REQUESTS_STATUS_USING_STATUE_REQUEST = 1;
         public const int SELL_SIDE_PERIODICALLY_SENDS_STATUS_USING_LIST_STATUS_PERIOD_OPTIONALLY_SPECIFIED_IN_PROGRESSPERIOD = 2;
         public const int REAL_TIME_EXECUTION_REPORTS = 3;
@@ -7290,7 +7287,7 @@ namespace QuickFix.Fields
             :base(Tags.IncTaxInd, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NET = 1;
         public const int GROSS = 2;
     }
@@ -7339,7 +7336,7 @@ namespace QuickFix.Fields
             :base(Tags.BasisPxType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char CLOSING_PRICE_AT_MORNINGN_SESSION = '2';
         public const char CLOSING_PRICE = '3';
         public const char CURRENT_PRICE = '4';
@@ -7415,7 +7412,7 @@ namespace QuickFix.Fields
             :base(Tags.PriceType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PERCENTAGE = 1;
         public const int FIXED_CABINET_TRADE_PRICE = 10;
         public const int VARIABLE_CABINET_TRADE_PRICE = 11;
@@ -7497,7 +7494,7 @@ namespace QuickFix.Fields
             :base(Tags.GTBookingInst, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int BOOK_OUT_ALL_TRADES_ON_DAY_OF_EXECUTION = 0;
         public const int ACCUMULATE_EXECTUIONS_UNTIL_FORDER_IS_FILLED_OR_EXPIRES = 1;
         public const int ACCUMULATE_UNTIL_VERBALLLY_NOTIFIED_OTHERWISE = 2;
@@ -7534,7 +7531,7 @@ namespace QuickFix.Fields
             :base(Tags.ListStatusType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ACK = 1;
         public const int RESPONSE = 2;
         public const int TIMED = 3;
@@ -7559,7 +7556,7 @@ namespace QuickFix.Fields
             :base(Tags.NetGrossInd, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NET = 1;
         public const int GROSS = 2;
     }
@@ -7578,7 +7575,7 @@ namespace QuickFix.Fields
             :base(Tags.ListOrderStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int IN_BIDDING_PROCESS = 1;
         public const int RECEIVED_FOR_EXECUTION = 2;
         public const int EXECUTING = 3;
@@ -7620,7 +7617,7 @@ namespace QuickFix.Fields
             :base(Tags.ListExecInstType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char IMMEDIATE = '1';
         public const char WAIT_FOR_EXECUT_INSTRUCTION = '2';
         public const char EXCHANGE_SWITCH_CIV_ORDER_3 = '3';
@@ -7646,7 +7643,7 @@ namespace QuickFix.Fields
             :base(Tags.CxlRejResponseTo, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char ORDER_CANCEL_REQUEST = '1';
         public const char ORDER_CANCEL_REPLACE_REQUEST = '2';
     }
@@ -7774,7 +7771,7 @@ namespace QuickFix.Fields
             :base(Tags.MultiLegReportingType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char SINGLE_SECURITY = '1';
         public const char INDIVIDUAL_LEG_OF_A_MULTI_LEG_SECURITY = '2';
         public const char MULTI_LEG_SECURITY = '3';
@@ -7859,7 +7856,7 @@ namespace QuickFix.Fields
             :base(Tags.SecurityIDSource, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string CUSIP = "1";
         public const string SEDOL = "2";
         public const string QUIK = "3";
@@ -7900,7 +7897,7 @@ namespace QuickFix.Fields
             :base(Tags.IOIQty, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string VAL_1000000000 = "0";
         public const string SMALL = "S";
         public const string MEDIUM = "M";
@@ -7967,7 +7964,7 @@ namespace QuickFix.Fields
             :base(Tags.PositionEffect, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char CLOSE = 'C';
         public const char FIFO = 'F';
         public const char OPEN = 'O';
@@ -8035,7 +8032,7 @@ namespace QuickFix.Fields
             :base(Tags.BenchmarkCurveName, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string EONIA = "EONIA";
         public const string EUREPO = "EUREPO";
         public const string EURIBOR = "Euribor";
@@ -8199,7 +8196,7 @@ namespace QuickFix.Fields
             :base(Tags.StipulationType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string ABSOLUTE_PREPAYMENT_SPEED = "ABS";
         public const string ALTERNATIVE_MINIMUM_TAX = "AMT";
         public const string AUTO_REINVESTMENT_AT_RATE_OR_BETTER = "AUTOREINV";
@@ -8300,7 +8297,7 @@ namespace QuickFix.Fields
             :base(Tags.StipulationValue, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string SPECIAL_CUM_DIVIDEND = "CD";
         public const string SPECIAL_EX_DIVIDEND = "XD";
         public const string SPECIAL_CUM_COUPON = "CC";
@@ -8331,7 +8328,7 @@ namespace QuickFix.Fields
             :base(Tags.YieldType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string AFTER_TAX_YIELD = "AFTERTAX";
         public const string ANNUAL_YIELD = "ANNUAL";
         public const string YIELD_AT_ISSUE = "ATISSUE";
@@ -8718,7 +8715,7 @@ namespace QuickFix.Fields
             :base(Tags.TradedFlatSwitch, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
     }
@@ -8767,7 +8764,7 @@ namespace QuickFix.Fields
             :base(Tags.QuoteStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ACCEPTED = 0;
         public const int CANCEL_FOR_SYMBOL = 1;
         public const int PENDING = 10;
@@ -8821,7 +8818,7 @@ namespace QuickFix.Fields
             :base(Tags.PartyIDSource, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char KOREAN_INVESTOR_ID = '1';
         public const char TAIWANESE_QUALIFIED_FOREIGN_INVESTOR_ID_QFII_FID = '2';
         public const char TAIWANESE_TRADING_ACCT = '3';
@@ -8927,7 +8924,7 @@ namespace QuickFix.Fields
             :base(Tags.PartyRole, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int EXECUTING_FIRM = 1;
         public const int SETTLEMENT_LOCATION = 10;
         public const int ORDER_ORIGINATION_TRADER = 11;
@@ -9135,7 +9132,7 @@ namespace QuickFix.Fields
             :base(Tags.Product, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int AGENCY = 1;
         public const int MORTGAGE = 10;
         public const int MUNICIPAL = 11;
@@ -9210,7 +9207,7 @@ namespace QuickFix.Fields
             :base(Tags.TestMessageIndicator, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
     }
@@ -9229,7 +9226,7 @@ namespace QuickFix.Fields
             :base(Tags.QuantityType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SHARES = 1;
         public const int BONDS = 2;
         public const int CURRENTFACE = 3;
@@ -9284,7 +9281,7 @@ namespace QuickFix.Fields
             :base(Tags.RoundingDirection, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char ROUND_TO_NEAREST = '0';
         public const char ROUND_DOWN = '1';
         public const char ROUND_UP = '2';
@@ -9424,7 +9421,7 @@ namespace QuickFix.Fields
             :base(Tags.DistribPaymentMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int CREST = 1;
         public const int BPAY = 10;
         public const int HIGH_VALUE_CLEARING_SYSTEM_HVACS = 11;
@@ -9485,7 +9482,7 @@ namespace QuickFix.Fields
             :base(Tags.CancellationRights, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char NO_M = 'M';
         public const char NO_N = 'N';
         public const char NO_O = 'O';
@@ -9509,7 +9506,7 @@ namespace QuickFix.Fields
             :base(Tags.MoneyLaunderingStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char EXEMPT_1 = '1';
         public const char EXEMPT_2 = '2';
         public const char EXEMPT_3 = '3';
@@ -9568,7 +9565,7 @@ namespace QuickFix.Fields
             :base(Tags.ExecPriceType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char BID_PRICE = 'B';
         public const char CREATION_PRICE = 'C';
         public const char CREATION_PRICE_PLUS_ADJUSTMENT_PERCENT = 'D';
@@ -9623,7 +9620,7 @@ namespace QuickFix.Fields
             :base(Tags.TradeReportTransType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NEW = 0;
         public const int CANCEL = 1;
         public const int REPLACE = 2;
@@ -9706,7 +9703,7 @@ namespace QuickFix.Fields
             :base(Tags.PaymentMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int CREST = 1;
         public const int DIRECT_CREDIT = 10;
         public const int CREDIT_CARD = 11;
@@ -9769,7 +9766,7 @@ namespace QuickFix.Fields
             :base(Tags.TaxAdvantageType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NONE_NOT_APPLICABLE = 0;
         public const int MAXI_ISA = 1;
         public const int EMPLOYEE_10 = 10;
@@ -9834,7 +9831,7 @@ namespace QuickFix.Fields
             :base(Tags.FundRenewWaiv, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char NO = 'N';
         public const char YES = 'Y';
     }
@@ -9973,7 +9970,7 @@ namespace QuickFix.Fields
             :base(Tags.RegistStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char ACCEPTED = 'A';
         public const char HELD = 'H';
         public const char REMINDER = 'N';
@@ -9994,7 +9991,7 @@ namespace QuickFix.Fields
             :base(Tags.RegistRejReasonCode, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int INVALID_UNACCEPTABLE_ACCOUNT_TYPE = 1;
         public const int INVALID_UNACEEPTABLE_INVESTOR_ID_SOURCE = 10;
         public const int INVALID_UNACCEPTABLE_DATE_OF_BIRTH = 11;
@@ -10126,7 +10123,7 @@ namespace QuickFix.Fields
             :base(Tags.RegistTransType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char NEW = '0';
         public const char REPLACE = '1';
         public const char CANCEL = '2';
@@ -10180,7 +10177,7 @@ namespace QuickFix.Fields
             :base(Tags.OwnershipType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char JOINT_TRUSTEES = '2';
         public const char JOINT_INVESTORS = 'J';
         public const char TENANTS_IN_COMMON = 'T';
@@ -10215,7 +10212,7 @@ namespace QuickFix.Fields
             :base(Tags.ContAmtType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int COMMISSION_AMOUNT = 1;
         public const int EXIT_CHARGE_PERCENT = 10;
         public const int FUND_BASED_RENEWAL_COMMISSION_PERCENT = 11;
@@ -10277,7 +10274,7 @@ namespace QuickFix.Fields
             :base(Tags.OwnerType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int INDIVIDUAL_INVESTOR = 1;
         public const int NETWORKING_SUB_ACCOUNT = 10;
         public const int NON_PROFIT_ORGANIZATION = 11;
@@ -10382,7 +10379,7 @@ namespace QuickFix.Fields
             :base(Tags.OrderCapacity, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char AGENCY = 'A';
         public const char PROPRIETARY = 'G';
         public const char INDIVIDUAL = 'I';
@@ -10405,7 +10402,7 @@ namespace QuickFix.Fields
             :base(Tags.OrderRestrictions, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string PROGRAM_TRADE = "1";
         public const string INDEX_ARBITRAGE = "2";
         public const string NON_INDEX_ARBITRAGE = "3";
@@ -10439,7 +10436,7 @@ namespace QuickFix.Fields
             :base(Tags.MassCancelRequestType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char CANCEL_ORDERS_FOR_A_SECURITY = '1';
         public const char CANCEL_ORDERS_FOR_AN_UNDERLYING_SECURITY = '2';
         public const char CANCEL_ORDERS_FOR_A_PRODUCT = '3';
@@ -10468,7 +10465,7 @@ namespace QuickFix.Fields
             :base(Tags.MassCancelResponse, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char CANCEL_REQUEST_REJECTED = '0';
         public const char CANCEL_ORDERS_FOR_A_SECURITY = '1';
         public const char CANCEL_ORDERS_FOR_AN_UNDERLYING_SECURITY = '2';
@@ -10498,7 +10495,7 @@ namespace QuickFix.Fields
             :base(Tags.MassCancelRejectReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int MASS_CANCEL_NOT_SUPPORTED = 0;
         public const int INVALID_OR_UNKNOWN_SECURITY = 1;
         public const int INVALID_OR_UNKOWN_UNDERLYING_SECURITY = 2;
@@ -10590,7 +10587,7 @@ namespace QuickFix.Fields
             :base(Tags.QuoteType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int INDICATIVE = 0;
         public const int TRADEABLE = 1;
         public const int RESTRICTED_TRADEABLE = 2;
@@ -10686,7 +10683,7 @@ namespace QuickFix.Fields
             :base(Tags.InstrRegistry, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string COUNTRY_IN_WHICH_REGISTRY_IS_KEPT = "Code";
         public const string PHYSICAL_OR_BEARER = "ZZ";
     }
@@ -10705,7 +10702,7 @@ namespace QuickFix.Fields
             :base(Tags.CashMargin, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char CASH = '1';
         public const char MARGIN_OPEN = '2';
         public const char MARGIN_CLOSE = '3';
@@ -10740,7 +10737,7 @@ namespace QuickFix.Fields
             :base(Tags.Scope, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string LOCAL_MARKET = "1";
         public const string NATIONAL = "2";
         public const string GLOBAL = "3";
@@ -10761,7 +10758,7 @@ namespace QuickFix.Fields
             :base(Tags.MDImplicitDelete, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
     }
@@ -10795,7 +10792,7 @@ namespace QuickFix.Fields
             :base(Tags.CrossType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int CROSS_AON = 1;
         public const int CROSS_IOC = 2;
         public const int CROSS_ONE_SIDE = 3;
@@ -10820,7 +10817,7 @@ namespace QuickFix.Fields
             :base(Tags.CrossPrioritization, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NONE = 0;
         public const int BUY_SIDE_IS_PRIORITIZED = 1;
         public const int SELL_SIDE_IS_PRIORITIZED = 2;
@@ -10855,7 +10852,7 @@ namespace QuickFix.Fields
             :base(Tags.NoSides, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ONE_SIDE = 1;
         public const int BOTH_SIDES = 2;
     }
@@ -10964,7 +10961,7 @@ namespace QuickFix.Fields
             :base(Tags.SecurityListRequestType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SYMBOL = 0;
         public const int SECURITYTYPE_AND_OR_CFICODE = 1;
         public const int PRODUCT = 2;
@@ -10988,7 +10985,7 @@ namespace QuickFix.Fields
             :base(Tags.SecurityRequestResult, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int VALID_REQUEST = 0;
         public const int INVALID_OR_UNSUPPORTED_REQUEST = 1;
         public const int NO_INSTRUMENTS_FOUND_THAT_MATCH_SELECTION_CRITERIA = 2;
@@ -11041,7 +11038,7 @@ namespace QuickFix.Fields
             :base(Tags.MultiLegRptTypeReq, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int REPORT_BY_MULITLEG_SECURITY_ONLY = 0;
         public const int REPORT_BY_MULTILEG_SECURITY_AND_BY_INSTRUMENT_LEGS_BELONGING_TO_THE_MULTILEG_SECURITY = 1;
         public const int REPORT_BY_INSTRUMENT_LEGS_BELONGING_TO_THE_MULTILEG_SECURITY_ONLY = 2;
@@ -11106,7 +11103,7 @@ namespace QuickFix.Fields
             :base(Tags.TradSesStatusRejReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int UNKNOWN_OR_INVALID_TRADINGSESSIONID = 1;
         public const int OTHER = 99;
     }
@@ -11140,7 +11137,7 @@ namespace QuickFix.Fields
             :base(Tags.TradeRequestType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ALL_TRADES = 0;
         public const int MATCHED_TRADES_MATCHING_CRITERIA_PROVIDED_ON_REQUEST = 1;
         public const int UNMATCHED_TRADES_THAT_MATCH_CRITERIA = 2;
@@ -11162,7 +11159,7 @@ namespace QuickFix.Fields
             :base(Tags.PreviouslyReported, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
     }
@@ -11211,7 +11208,7 @@ namespace QuickFix.Fields
             :base(Tags.MatchStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char COMPARED_MATCHED_OR_AFFIRMED = '0';
         public const char UNCOMPARED_UNMATCHED_OR_UNAFFIRMED = '1';
         public const char ADVISORY_OR_ALERT = '2';
@@ -11234,7 +11231,7 @@ namespace QuickFix.Fields
             :base(Tags.MatchType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string EXACT_MATCH_ON_TRADE_DATE_STOCK_SYMBOL_QUANTITY_PRICE_TRADE_TYPE_AND_SPECIAL_TRADE_INDICATOR_PLUS_FOUR_BADGES_AND_EXECUTION_TIME = "A1";
         public const string EXACT_MATCH_ON_TRADE_DATE_STOCK_SYMBOL_QUANTITY_PRICE_TRADE_TYPE_AND_SPECIAL_TRADE_INDICATOR_PLUS_FOUR_BADGES = "A2";
         public const string EXACT_MATCH_ON_TRADE_DATE_STOCK_SYMBOL_QUANTITY_PRICE_TRADE_TYPE_AND_SPECIAL_TRADE_INDICATOR_PLUS_TWO_BADGES_AND_EXECUTION_TIME = "A3";
@@ -11303,7 +11300,7 @@ namespace QuickFix.Fields
             :base(Tags.OddLot, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
     }
@@ -11337,7 +11334,7 @@ namespace QuickFix.Fields
             :base(Tags.ClearingInstruction, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PROCESS_NORMALLY = 0;
         public const int EXCLUDE_FROM_ALL_NETTING = 1;
         public const int AUTOMATIC_GIVE_UP_MODE = 10;
@@ -11414,7 +11411,7 @@ namespace QuickFix.Fields
             :base(Tags.AccountType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ACCOUNT_IS_CARRIED_ON_CUSTOMER_SIDE_OF_THE_BOOKS = 1;
         public const int ACCOUNT_IS_CARRIED_ON_NON_CUSTOMER_SIDE_OF_BOOKS = 2;
         public const int HOUSE_TRADER = 3;
@@ -11440,7 +11437,7 @@ namespace QuickFix.Fields
             :base(Tags.CustOrderCapacity, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int MEMBER_TRADING_FOR_THEIR_OWN_ACCOUNT = 1;
         public const int CLEARING_FIRM_TRADING_FOR_ITS_PROPRIETARY_ACCOUNT = 2;
         public const int MEMBER_TRADING_FOR_ANOTHER_MEMBER = 3;
@@ -11491,7 +11488,7 @@ namespace QuickFix.Fields
             :base(Tags.MassStatusReqType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int STATUS_FOR_ORDERS_FOR_A_SECURITY = 1;
         public const int STATUS_FOR_ORDERS_FOR_AN_UNDERLYING_SECURITY = 2;
         public const int STATUS_FOR_ORDERS_FOR_A_PRODUCT = 3;
@@ -11567,7 +11564,7 @@ namespace QuickFix.Fields
             :base(Tags.DayBookingInst, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char CAN_TRIGGER_BOOKING_WITHOUT_REFERENCE_TO_THE_ORDER_INITIATOR = '0';
         public const char SPEAK_WITH_ORDER_INITIATOR_BEFORE_BOOKING = '1';
         public const char ACCUMULATE = '2';
@@ -11587,7 +11584,7 @@ namespace QuickFix.Fields
             :base(Tags.BookingUnit, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char EACH_PARTIAL_EXECUTION_IS_A_BOOKABLE_UNIT = '0';
         public const char AGGREGATE_PARTIAL_EXECUTIONS_ON_THIS_ORDER_AND_BOOK_ONE_TRADE_PER_ORDER = '1';
         public const char AGGREGATE_EXECUTIONS_FOR_THIS_SYMBOL_SIDE_AND_SETTLEMENT_DATE = '2';
@@ -11607,7 +11604,7 @@ namespace QuickFix.Fields
             :base(Tags.PreallocMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char PRO_RATA = '0';
         public const char DO_NOT_PRO_RATA = '1';
     }
@@ -12121,7 +12118,7 @@ namespace QuickFix.Fields
             :base(Tags.TradingSessionSubID, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string PRE_TRADING = "1";
         public const string OPENING_OR_OPENING_AUCTION = "2";
         public const string VAL_3 = "3";
@@ -12145,7 +12142,7 @@ namespace QuickFix.Fields
             :base(Tags.AllocType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int CALCULATED = 1;
         public const int PRELIMINARY = 2;
         public const int SELLSIDE_CALCULATED_USING_PRELIMINARY = 3;
@@ -12305,7 +12302,7 @@ namespace QuickFix.Fields
             :base(Tags.ClearingFeeIndicator, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string VAL_1ST_YEAR_DELEGATE_TRADING_FOR_OWN_ACCOUNT = "1";
         public const string VAL_2ND_YEAR_DELEGATE_TRADING_FOR_OWN_ACCOUNT = "2";
         public const string VAL_3RD_YEAR_DELEGATE_TRADING_FOR_OWN_ACCOUNT = "3";
@@ -12338,7 +12335,7 @@ namespace QuickFix.Fields
             :base(Tags.WorkingIndicator, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
     }
@@ -12372,7 +12369,7 @@ namespace QuickFix.Fields
             :base(Tags.PriorityIndicator, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PRIORITY_UNCHANGED = 0;
         public const int LOST_PRIORITY_AS_RESULT_OF_ORDER_CHANGE = 1;
     }
@@ -12556,7 +12553,7 @@ namespace QuickFix.Fields
             :base(Tags.LegalConfirm, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
     }
@@ -12605,7 +12602,7 @@ namespace QuickFix.Fields
             :base(Tags.SecDefStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PENDING_APPROVAL = 0;
         public const int APPROVED = 1;
         public const int REJECTED = 2;
@@ -12687,7 +12684,7 @@ namespace QuickFix.Fields
             :base(Tags.QuoteRequestRejectReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int UNKNOWN_SYMBOL = 1; //неизвестный символ = 1;
         public const int PASS = 10; //pass = 10;
         public const int EXCHANGE = 2; //обмен = 2;
@@ -12733,7 +12730,7 @@ namespace QuickFix.Fields
             :base(Tags.SettlType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string REGULAR = "0";
         public const string CASH = "1";
         public const string NEXT_DAY = "2";
@@ -12822,7 +12819,7 @@ namespace QuickFix.Fields
             :base(Tags.OpenCloseSettlFlag, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string DAILY_OPEN = "0";
         public const string SESSION_OPEN = "1";
         public const string DELIVERY_SETTLEMENT_ENTRY = "2";
@@ -12892,7 +12889,7 @@ namespace QuickFix.Fields
             :base(Tags.BidTradeType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char AGENCY = 'A';
         public const char VWAP_GUARANTEE = 'G';
         public const char GUARANTEED_CLOSE = 'J';
@@ -12988,7 +12985,7 @@ namespace QuickFix.Fields
             :base(Tags.AcctIDSource, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int BIC = 1;
         public const int SID_CODE = 2;
         public const int TFM = 3;
@@ -13071,7 +13068,7 @@ namespace QuickFix.Fields
             :base(Tags.ConfirmStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int RECEIVED = 1;
         public const int MISMATCHED_ACCOUNT = 2;
         public const int MISSING_SETTLEMENT_INSTRUCTIONS = 3;
@@ -13093,7 +13090,7 @@ namespace QuickFix.Fields
             :base(Tags.ConfirmTransType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NEW = 0;
         public const int REPLACE = 1;
         public const int CANCEL = 2;
@@ -13128,7 +13125,7 @@ namespace QuickFix.Fields
             :base(Tags.DeliveryForm, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int BOOK_ENTRY = 1;
         public const int BEARER = 2;
         public const int BOOKENTRY = 1;
@@ -13463,7 +13460,7 @@ namespace QuickFix.Fields
             :base(Tags.LegSwapType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PAR_FOR_PAR = 1;
         public const int MODIFIED_DURATION = 2;
         public const int RISK = 4;
@@ -13499,7 +13496,7 @@ namespace QuickFix.Fields
             :base(Tags.QuotePriceType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PERCENT = 1;
         public const int YIELD = 10;
         public const int PER_SHARE = 2;
@@ -13542,7 +13539,7 @@ namespace QuickFix.Fields
             :base(Tags.QuoteRespType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int HIT_LIFT = 1;
         public const int COUNTER = 2;
         public const int EXPIRED = 3;
@@ -13687,7 +13684,7 @@ namespace QuickFix.Fields
             :base(Tags.PosType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string ALLOCATION_TRADE_QTY = "ALC";
         public const string OPTION_ASSIGNMENT = "AS";
         public const string AS_OF_TRADE_QTY = "ASF";
@@ -13761,7 +13758,7 @@ namespace QuickFix.Fields
             :base(Tags.PosQtyStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SUBMITTED = 0;
         public const int ACCEPTED = 1;
         public const int REJECTED = 2;
@@ -13781,7 +13778,7 @@ namespace QuickFix.Fields
             :base(Tags.PosAmtType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string CASH_AMOUNT = "CASH";
         public const string CASH_RESIDUAL_AMOUNT = "CRES";
         public const string FINAL_MARK_TO_MARKET_AMOUNT = "FMTM";
@@ -13831,7 +13828,7 @@ namespace QuickFix.Fields
             :base(Tags.PosTransType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int EXERCISE = 1;
         public const int DO_NOT_EXERCISE = 2;
         public const int POSITION_ADJUSTMENT = 3;
@@ -13884,7 +13881,7 @@ namespace QuickFix.Fields
             :base(Tags.PosMaintAction, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NEW = 1;
         public const int REPLACE = 2;
         public const int CANCEL = 3;
@@ -13950,7 +13947,7 @@ namespace QuickFix.Fields
             :base(Tags.SettlSessID, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string INTRADAY = "ITD";
         public const string REGULAR_TRADING_HOURS = "RTH";
         public const string ELECTRONIC_TRADING_HOURS = "ETH";
@@ -13986,7 +13983,7 @@ namespace QuickFix.Fields
             :base(Tags.AdjustmentType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PROCESS_REQUEST_AS_MARGIN_DISPOSITION = 0;
         public const int DELTA_PLUS = 1;
         public const int DELTA_MINUS = 2;
@@ -14052,7 +14049,7 @@ namespace QuickFix.Fields
             :base(Tags.PosMaintStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ACCEPTED = 0;
         public const int ACCEPTED_WITH_WARNINGS = 1;
         public const int REJECTED = 2;
@@ -14074,7 +14071,7 @@ namespace QuickFix.Fields
             :base(Tags.PosMaintResult, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SUCCESSFUL_COMPLETION = 0;
         public const int REJECTED = 1;
         public const int OTHER = 99;
@@ -14095,7 +14092,7 @@ namespace QuickFix.Fields
             :base(Tags.PosReqType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int POSITIONS = 0;
         public const int TRADES = 1;
         public const int EXERCISES = 2;
@@ -14119,7 +14116,7 @@ namespace QuickFix.Fields
             :base(Tags.ResponseTransportType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int INBAND = 0;
         public const int OUT_OF_BAND = 1;
     }
@@ -14168,7 +14165,7 @@ namespace QuickFix.Fields
             :base(Tags.PosReqResult, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int VALID_REQUEST = 0;
         public const int INVALID_OR_UNSUPPORTED_REQUEST = 1;
         public const int NO_POSITIONS_FOUND_THAT_MATCH_CRITERIA = 2;
@@ -14191,7 +14188,7 @@ namespace QuickFix.Fields
             :base(Tags.PosReqStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int COMPLETED = 0;
         public const int COMPLETED_WITH_WARNINGS = 1;
         public const int REJECTED = 2;
@@ -14226,7 +14223,7 @@ namespace QuickFix.Fields
             :base(Tags.SettlPriceType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int FINAL = 1;
         public const int THEORETICAL = 2;
     }
@@ -14363,7 +14360,6 @@ namespace QuickFix.Fields
             :base(Tags.LegPool) {}
         public LegPool(string val)
             :base(Tags.LegPool, val) {}
-
     }
 
 
@@ -14408,7 +14404,6 @@ namespace QuickFix.Fields
             :base(Tags.DeliveryDate) {}
         public DeliveryDate(string val)
             :base(Tags.DeliveryDate, val) {}
-
     }
 
 
@@ -14425,7 +14420,7 @@ namespace QuickFix.Fields
             :base(Tags.AssignmentMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char PRO_RATA = 'P';
         public const char RANDOM = 'R';
         public const char PRORATA = 'P';
@@ -14474,8 +14469,7 @@ namespace QuickFix.Fields
         public ExerciseMethod(char val)
             :base(Tags.ExerciseMethod, val) {}
 
-
-        // Field Enumerations
+        // Перечисления полей
         public const char AUTOMATIC = 'A';
         public const char MANUAL = 'M';
     }
@@ -14509,7 +14503,7 @@ namespace QuickFix.Fields
             :base(Tags.TradeRequestResult, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SUCCESSFUL = 0;
         public const int INVALID_OR_UNKNOWN_INSTRUMENT = 1;
         public const int INVALID_TYPE_OF_TRADE_REQUESTED = 2;
@@ -14538,7 +14532,7 @@ namespace QuickFix.Fields
             :base(Tags.TradeRequestStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ACCEPTED = 0;
         public const int COMPLETED = 1;
         public const int REJECTED = 2;
@@ -14558,7 +14552,7 @@ namespace QuickFix.Fields
             :base(Tags.TradeReportRejectReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SUCCESSFUL = 0;
         public const int INVALID_PARTY_ONFORMATION = 1;
         public const int UNKNOWN_INSTRUMENT = 2;
@@ -14583,7 +14577,7 @@ namespace QuickFix.Fields
             :base(Tags.SideMultiLegReportingType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SINGLE_SECURITY = 1;
         public const int INDIVIDUAL_LEG_OF_A_MULTILEG_SECURITY = 2;
         public const int MULTILEG_SECURITY = 3;
@@ -14864,7 +14858,7 @@ namespace QuickFix.Fields
             :base(Tags.TrdRegTimestampType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int EXECUTION_TIME = 1;
         public const int TIME_IN = 2;
         public const int TIME_OUT = 3;
@@ -14918,7 +14912,7 @@ namespace QuickFix.Fields
             :base(Tags.ConfirmType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int STATUS = 1;
         public const int CONFIRMATION = 2;
         public const int CONFIRMATION_REQUEST_REJECTED = 3;
@@ -14938,7 +14932,7 @@ namespace QuickFix.Fields
             :base(Tags.ConfirmRejReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int MISMATCHED_ACCOUNT = 1;
         public const int MISSING_SETTLEMENT_INSTRUCTIONS = 2;
         public const int OTHER = 99;
@@ -14958,7 +14952,7 @@ namespace QuickFix.Fields
             :base(Tags.BookingType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int REGULAR_BOOKING = 0;
         public const int CFD = 1;
         public const int TOTAL_RETURN_SWAP = 2;
@@ -15042,7 +15036,7 @@ namespace QuickFix.Fields
             :base(Tags.AllocSettlInstType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int USE_DEFAULT_INSTRUCTIONS = 0;
         public const int DERIVE_FROM_PARAMETERS_PROVIDED = 1;
         public const int FULL_DETAILS_PROVIDED = 2;
@@ -15154,7 +15148,7 @@ namespace QuickFix.Fields
             :base(Tags.DlvyInstType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char CASH = 'C';
         public const char SECURITIES = 'S';
     }
@@ -15173,7 +15167,7 @@ namespace QuickFix.Fields
             :base(Tags.TerminationType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int OVERNIGHT = 1;
         public const int TERM = 2;
         public const int FLEXIBLE = 3;
@@ -15239,7 +15233,7 @@ namespace QuickFix.Fields
             :base(Tags.SettlInstReqRejCode, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int UNABLE_TO_PROCESS_REQUEST = 0;
         public const int UNKNOWN_ACCOUNT = 1;
         public const int NO_MATCHING_SETTLEMENT_INSTRUCTIONS_FOUND = 2;
@@ -15275,7 +15269,7 @@ namespace QuickFix.Fields
             :base(Tags.AllocReportType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SELLSIDE_CALCULATED_USING_PRELIMINARY = 3;
         public const int SELLSIDE_CALCULATED_WITHOUT_PRELIMINARY = 4;
         public const int WAREHOUSE_RECAP = 5;
@@ -15317,7 +15311,7 @@ namespace QuickFix.Fields
             :base(Tags.AllocCancReplaceReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ORIGINAL_DETAILS_INCOMPLETE_INCORRECT = 1;
         public const int CHANGE_IN_UNDERLYING_ORDER_DETAILS = 2;
         public const int OTHER = 99;
@@ -15352,7 +15346,7 @@ namespace QuickFix.Fields
             :base(Tags.AllocAccountType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ACCOUNT_IS_CARRIED_PN_CUSTOMER_SIDE_OF_BOOKS = 1;
         public const int ACCOUNT_IS_CARRIED_ON_NON_CUSTOMER_SIDE_OF_BOOKS = 2;
         public const int HOUSE_TRADER = 3;
@@ -15438,7 +15432,7 @@ namespace QuickFix.Fields
             :base(Tags.PartySubIDType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int FIRM = 1;
         public const int SECURITIES_ACCOUNT_NUMBER = 10;
         public const int REGISTRATION_NUMBER = 11;
@@ -15548,7 +15542,7 @@ namespace QuickFix.Fields
             :base(Tags.AllocIntermedReqType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PENDING_ACCEPT = 1;
         public const int PENDING_RELEASE = 2;
         public const int PENDING_REVERSAL = 3;
@@ -15631,7 +15625,7 @@ namespace QuickFix.Fields
             :base(Tags.ApplQueueResolution, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NO_ACTION_TAKEN = 0;
         public const int QUEUE_FLUSHED = 1;
         public const int OVERLAY_LAST = 2;
@@ -15652,7 +15646,7 @@ namespace QuickFix.Fields
             :base(Tags.ApplQueueAction, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NO_ACTION_TAKEN = 0;
         public const int QUEUE_FLUSHED = 1;
         public const int OVERLAY_LAST = 2;
@@ -15718,7 +15712,7 @@ namespace QuickFix.Fields
             :base(Tags.AvgPxIndicator, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NO_AVERAGE_PRICING = 0;
         public const int TRADE_IS_PART_OF_AN_AVERAGE_PRICE_GROUP_IDENTIFIED_BY_THE_TRADELINKID = 1;
         public const int LAST_TRADE_IS_THE_AVERAGE_PRICE_GROUP_IDENTIFIED_BY_THE_TRADELINKID = 2;
@@ -15829,7 +15823,7 @@ namespace QuickFix.Fields
             :base(Tags.TradeAllocIndicator, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ALLOCATION_NOT_REQUIRED = 0;
         public const int ALLOCATION_REQUIRED = 1;
         public const int USE_ALLOCATION_PROVIDED_WITH_THE_TRADE = 2;
@@ -15852,7 +15846,7 @@ namespace QuickFix.Fields
             :base(Tags.ExpirationCycle, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int EXPIRE_ON_TRADING_SESSION_CLOSE = 0;
         public const int EXPIRE_ON_TRADING_SESSION_OPEN = 1;
         public const int TRADING_ELIGIBILITY_EXPIRATION_SPECIFIED_IN_THE_DATE_AND_TIME_FIELDS_EVENTDATE = 2;
@@ -15872,7 +15866,7 @@ namespace QuickFix.Fields
             :base(Tags.TrdType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int REGULAR_TRADE = 0;
         public const int BLOCK_TRADE_1 = 1;
         public const int AFTER_HOURS_TRADE = 10;
@@ -15945,7 +15939,7 @@ namespace QuickFix.Fields
             :base(Tags.TrdSubType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int CMTA = 0;
         public const int INTERNAL_TRANSFER_OR_ADJUSTMENT = 1;
         public const int EXTERNAL_TRANSFER_OR_TRANSFER_OF_ACCOUNT = 2;
@@ -16076,7 +16070,7 @@ namespace QuickFix.Fields
             :base(Tags.PegMoveType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int FLOATING = 0;
         public const int FIXED = 1;
     }
@@ -16095,7 +16089,7 @@ namespace QuickFix.Fields
             :base(Tags.PegOffsetType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PRICE = 0;
         public const int BASIS_POINTS = 1;
         public const int TICKS = 2;
@@ -16117,7 +16111,7 @@ namespace QuickFix.Fields
             :base(Tags.PegLimitType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int OR_BETTER = 0;
         public const int STRICT = 1;
         public const int OR_WORSE = 2;
@@ -16137,7 +16131,7 @@ namespace QuickFix.Fields
             :base(Tags.PegRoundDirection, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int MORE_AGGRESSIVE = 1;
         public const int MORE_PASSIVE = 2;
     }
@@ -16171,7 +16165,7 @@ namespace QuickFix.Fields
             :base(Tags.PegScope, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int LOCAL = 1;
         public const int NATIONAL = 2;
         public const int GLOBAL = 3;
@@ -16193,7 +16187,7 @@ namespace QuickFix.Fields
             :base(Tags.DiscretionMoveType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int FLOATING = 0;
         public const int FIXED = 1;
     }
@@ -16212,7 +16206,7 @@ namespace QuickFix.Fields
             :base(Tags.DiscretionOffsetType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PRICE = 0;
         public const int BASIS_POINTS = 1;
         public const int TICKS = 2;
@@ -16234,7 +16228,7 @@ namespace QuickFix.Fields
             :base(Tags.DiscretionLimitType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int OR_BETTER = 0;
         public const int STRICT = 1;
         public const int OR_WORSE = 2;
@@ -16254,7 +16248,7 @@ namespace QuickFix.Fields
             :base(Tags.DiscretionRoundDirection, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int MORE_AGGRESSIVE = 1;
         public const int MORE_PASSIVE = 2;
     }
@@ -16288,7 +16282,7 @@ namespace QuickFix.Fields
             :base(Tags.DiscretionScope, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int LOCAL = 1;
         public const int NATIONAL = 2;
         public const int GLOBAL = 3;
@@ -16309,7 +16303,7 @@ namespace QuickFix.Fields
             :base(Tags.TargetStrategy, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int VWAP = 1;
         public const int PARTICIPATE = 2;
         public const int MININIZE_MARKET_IMPACT = 3;
@@ -16374,7 +16368,7 @@ namespace QuickFix.Fields
             :base(Tags.LastLiquidityInd, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ADDED_LIQUIDITY = 1;
         public const int REMOVED_LIQUIDITY = 2;
         public const int LIQUIDITY_ROUTED_OUT = 3;
@@ -16395,7 +16389,7 @@ namespace QuickFix.Fields
             :base(Tags.PublishTrdIndicator, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
     }
@@ -16414,7 +16408,7 @@ namespace QuickFix.Fields
             :base(Tags.ShortSaleReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int DEALER_SOLD_SHORT = 0;
         public const int DEALER_SOLD_SHORT_EXEMPT = 1;
         public const int SELLING_CUSTOMER_SOLD_SHORT = 2;
@@ -16438,7 +16432,7 @@ namespace QuickFix.Fields
             :base(Tags.QtyType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int UNITS = 0;
         public const int CONTRACTS = 1;
         public const int UNITS_OF_MEASURE_PER_TIME_UNIT = 2;
@@ -16473,7 +16467,7 @@ namespace QuickFix.Fields
             :base(Tags.TradeReportType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SUBMIT = 0;
         public const int ALLEGED_1 = 1;
         public const int ACCEPT = 2;
@@ -16508,7 +16502,7 @@ namespace QuickFix.Fields
             :base(Tags.AllocNoOrdersType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NOT_SPECIFIED = 0;
         public const int EXPLICIT_LIST_PROVIDED = 1;
     }
@@ -16632,7 +16626,7 @@ namespace QuickFix.Fields
             :base(Tags.EventType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PUT = 1;
         public const int CALL = 2;
         public const int TENDER = 3;
@@ -16744,7 +16738,7 @@ namespace QuickFix.Fields
             :base(Tags.InstrAttribType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int FLAT = 1;
         public const int ORIGINAL_ISSUE_DISCOUNT = 10;
         public const int CALLABLE_PUTTABLE = 11;
@@ -16838,7 +16832,7 @@ namespace QuickFix.Fields
             :base(Tags.CPProgram, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int VAL_3 = 1;
         public const int VAL_4 = 2;
         public const int OTHER = 99;
@@ -17083,7 +17077,7 @@ namespace QuickFix.Fields
             :base(Tags.MiscFeeBasis, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ABSOLUTE = 0;
         public const int PER_UNIT = 1;
         public const int PERCENTAGE = 2;
@@ -17118,7 +17112,7 @@ namespace QuickFix.Fields
             :base(Tags.LastFragment, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
     }
@@ -17152,7 +17146,7 @@ namespace QuickFix.Fields
             :base(Tags.CollAsgnReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int INITIAL = 0;
         public const int SCHEDULED = 1;
         public const int TIME_WARNING = 2;
@@ -17177,7 +17171,7 @@ namespace QuickFix.Fields
             :base(Tags.CollInquiryQualifier, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int TRADE_DATE = 0;
         public const int GC_INSTRUMENT = 1;
         public const int COLLATERAL_INSTRUMENT = 2;
@@ -17294,7 +17288,7 @@ namespace QuickFix.Fields
             :base(Tags.CollAsgnTransType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NEW = 0;
         public const int REPLACE = 1;
         public const int CANCEL = 2;
@@ -17331,7 +17325,7 @@ namespace QuickFix.Fields
             :base(Tags.CollAsgnRespType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int RECEIVED = 0;
         public const int ACCEPTED = 1;
         public const int DECLINED = 2;
@@ -17352,7 +17346,7 @@ namespace QuickFix.Fields
             :base(Tags.CollAsgnRejectReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int UNKNOWN_DEAL = 0;
         public const int UNKNOWN_OR_INVALID_INSTRUMENT = 1;
         public const int UNAUTHORIZED_TRANSACTION = 2;
@@ -17421,7 +17415,7 @@ namespace QuickFix.Fields
             :base(Tags.CollStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int UNASSIGNED = 0;
         public const int PARTIALLY_ASSIGNED = 1;
         public const int ASSIGNMENT_PROPOSED = 2;
@@ -17458,7 +17452,7 @@ namespace QuickFix.Fields
             :base(Tags.LastRptRequested, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean NO = false;
         public const Boolean YES = true;
     }
@@ -17567,7 +17561,7 @@ namespace QuickFix.Fields
             :base(Tags.DeliveryType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int VERSUS_PAYMENT_DELIVER = 0;
         public const int FREE_DELIVER = 1;
         public const int TRI_PARTY = 2;
@@ -17650,7 +17644,7 @@ namespace QuickFix.Fields
             :base(Tags.UserRequestType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int LOG_ON_USER = 1;
         public const int LOG_OFF_USER = 2;
         public const int CHANGE_PASSWORD_FOR_USER = 3;
@@ -17689,7 +17683,7 @@ namespace QuickFix.Fields
             :base(Tags.UserStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int LOGGED_IN = 1;
         public const int NOT_LOGGED_IN = 2;
         public const int USER_NOT_RECOGNISED = 3;
@@ -17729,7 +17723,7 @@ namespace QuickFix.Fields
             :base(Tags.StatusValue, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int CONNECTED = 1;
         public const int NOT_CONNECTED_2 = 2;
         public const int NOT_CONNECTED_3 = 3;
@@ -17842,7 +17836,7 @@ namespace QuickFix.Fields
             :base(Tags.NetworkRequestType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SNAPSHOT = 1;
         public const int SUBSCRIBE = 2;
         public const int STOP_SUBSCRIBING = 4;
@@ -17879,7 +17873,7 @@ namespace QuickFix.Fields
             :base(Tags.NetworkStatusResponseType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int FULL = 1;
         public const int INCREMENTAL_UPDATE = 2;
     }
@@ -17913,7 +17907,7 @@ namespace QuickFix.Fields
             :base(Tags.TrdRptStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ACCEPTED = 0;
         public const int REJECTED = 1;
         public const int ACCEPTED_WITH_ERRORS = 3;
@@ -17933,7 +17927,7 @@ namespace QuickFix.Fields
             :base(Tags.AffirmStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int RECEIVED = 1;
         public const int CONFIRM_REJECTED_IE_NOT_AFFIRMED = 2;
         public const int AFFIRMED = 3;
@@ -17999,7 +17993,7 @@ namespace QuickFix.Fields
             :base(Tags.CollAction, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int RETAIN = 0;
         public const int ADD = 1;
         public const int REMOVE = 2;
@@ -18019,7 +18013,7 @@ namespace QuickFix.Fields
             :base(Tags.CollInquiryStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ACCEPTED = 0;
         public const int ACCEPTED_WITH_WARNINGS = 1;
         public const int COMPLETED = 2;
@@ -18041,7 +18035,7 @@ namespace QuickFix.Fields
             :base(Tags.CollInquiryResult, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SUCCESSFUL = 0;
         public const int INVALID_OR_UNKNOWN_INSTRUMENT = 1;
         public const int INVALID_OR_UNKNOWN_COLLATERAL_TYPE = 2;
@@ -18249,7 +18243,7 @@ namespace QuickFix.Fields
             :base(Tags.HaltReasonChar, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char NEWS_DISSEMINATION = 'D';
         public const char ORDER_INFLUX = 'E';
         public const char ORDER_IMBALANCE = 'I';
@@ -18302,7 +18296,7 @@ namespace QuickFix.Fields
             :base(Tags.StrategyParameterType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int INT = 1;
         public const int LENGTH = 2;
         public const int NUMINGROUP = 3;
@@ -18430,7 +18424,7 @@ namespace QuickFix.Fields
             :base(Tags.SecurityStat, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string ACTIVE = "1";
         public const string INACTIVE = "2";
     }
@@ -18569,7 +18563,7 @@ namespace QuickFix.Fields
             :base(Tags.UnderlyingCashType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string FIXED = "FIXED";
         public const string DIFF = "DIFF";
     }
@@ -18588,7 +18582,7 @@ namespace QuickFix.Fields
             :base(Tags.UnderlyingSettlementType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int T_PLUS_1 = 2;
         public const int T_PLUS_3 = 4;
         public const int T_PLUS_4 = 5;
@@ -18668,7 +18662,7 @@ namespace QuickFix.Fields
             :base(Tags.SecurityUpdateAction, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char ADD = 'A';
         public const char DELETE = 'D';
         public const char MODIFY = 'M';
@@ -18703,7 +18697,7 @@ namespace QuickFix.Fields
             :base(Tags.ExpType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int AUTO_EXERCISE = 1;
         public const int NON_AUTO_EXERCISE = 2;
         public const int FINAL_WILL_BE_EXERCISED = 3;
@@ -18860,7 +18854,7 @@ namespace QuickFix.Fields
             :base(Tags.IndividualAllocType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SUB_ALLOCATE = 1;
         public const int THIRD_PARTY_ALLOCATION = 2;
     }
@@ -18909,7 +18903,7 @@ namespace QuickFix.Fields
             :base(Tags.UnitOfMeasure, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string MEGAWATT_HOURS = "MWh";
         public const string ONE_MILLION_BTU = "MMBtu";
         public const string BARRELS = "Bbl";
@@ -18939,7 +18933,7 @@ namespace QuickFix.Fields
             :base(Tags.TimeUnit, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string SECOND = "S";
         public const string MINUTE = "Min";
         public const string HOUR = "H";
@@ -19023,7 +19017,7 @@ namespace QuickFix.Fields
             :base(Tags.AllocMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int AUTOMATIC = 1;
         public const int GUARANTOR = 2;
         public const int MANUAL = 3;
@@ -19103,7 +19097,7 @@ namespace QuickFix.Fields
             :base(Tags.SideTrdSubTyp, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int CMTA = 0;
         public const int INTERNAL_TRANSFER = 1;
         public const int EXTERNAL_TRANSFER = 2;
@@ -19210,7 +19204,7 @@ namespace QuickFix.Fields
             :base(Tags.AsOfIndicator, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char FALSE = '0';
         public const char TRUE = '1';
     }
@@ -19304,7 +19298,7 @@ namespace QuickFix.Fields
             :base(Tags.MDBookType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int TOP_OF_BOOK = 1;
         public const int PRICE_DEPTH = 2;
         public const int ORDER_DEPTH = 3;
@@ -19354,7 +19348,7 @@ namespace QuickFix.Fields
             :base(Tags.MDOriginType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int BOOK = 0;
         public const int OFF_BOOK = 1;
         public const int CROSS = 2;
@@ -19464,7 +19458,7 @@ namespace QuickFix.Fields
             :base(Tags.CustOrderHandlingInst, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string ADD_ON_ORDER = "ADD";
         public const string ALL_OR_NONE = "AON";
         public const string CASH_NOT_HELD = "CNH";
@@ -19505,7 +19499,7 @@ namespace QuickFix.Fields
             :base(Tags.OrderHandlingInstSource, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NASD_OATS = 1;
     }
 
@@ -19523,7 +19517,7 @@ namespace QuickFix.Fields
             :base(Tags.DeskType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string AGENCY = "A";
         public const string ARBITRAGE = "AR";
         public const string DERIVATIVES = "D";
@@ -19551,7 +19545,7 @@ namespace QuickFix.Fields
             :base(Tags.DeskTypeSource, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NASD_OATS = 1;
     }
 
@@ -19569,7 +19563,7 @@ namespace QuickFix.Fields
             :base(Tags.DeskOrderHandlingInst, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string ADD_ON_ORDER = "ADD";
         public const string ALL_OR_NONE = "AON";
         public const string CASH_NOT_HELD = "CNH";
@@ -19610,7 +19604,7 @@ namespace QuickFix.Fields
             :base(Tags.ExecAckStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char RECEIVED_NOT_YET_PROCESSED = '0';
         public const char ACCEPTED = '1';
         public const char DONT_KNOW = '2';
@@ -19720,7 +19714,7 @@ namespace QuickFix.Fields
             :base(Tags.CollApplType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SPECIFIC_DEPOSIT = 0;
         public const int GENERAL = 1;
     }
@@ -19769,7 +19763,7 @@ namespace QuickFix.Fields
             :base(Tags.UnderlyingFXRateCalc, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char MULTIPLY = 'M';
         public const char DIVIDE = 'D';
     }
@@ -19788,7 +19782,7 @@ namespace QuickFix.Fields
             :base(Tags.AllocPositionEffect, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char OPEN = 'O';
         public const char CLOSE = 'C';
         public const char ROLLED = 'R';
@@ -19809,7 +19803,7 @@ namespace QuickFix.Fields
             :base(Tags.DealingCapacity, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char AGENT = 'A';
         public const char PRINCIPAL = 'P';
         public const char RISKLESS_PRINCIPAL = 'R';
@@ -19949,7 +19943,7 @@ namespace QuickFix.Fields
             :base(Tags.AggressorIndicator, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const Boolean YES = true;
         public const Boolean NO = false;
     }
@@ -20147,13 +20141,12 @@ namespace QuickFix.Fields
         public MDQuoteType(int val)
             :base(Tags.MDQuoteType, val) {}
 
-
-        // Field Enumerations
-        public const int INDICATIVE = 0;
-        public const int TRADEABLE = 1;
-        public const int RESTRICTED_TRADEABLE = 2;
-        public const int COUNTER = 3;
-        public const int INDICATIVE_AND_TRADEABLE = 4;
+        // Перечисления полей
+        public const int INDICATIVE = 0; //индикатив = 0;
+        public const int TRADEABLE = 1; //торговый = 1;
+        public const int RESTRICTED_TRADEABLE = 2; //ограниченная торговля = 2;
+        public const int COUNTER = 3; //счетчик = 3;
+        public const int INDICATIVE_AND_TRADEABLE = 4; //показательный и торговый = 4;
     }
 
 
@@ -20275,7 +20268,7 @@ namespace QuickFix.Fields
             :base(Tags.RefOrderIDSource, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char SECONDARYORDERID = '0';
         public const char ORDERID = '1';
         public const char MDENTRYID = '2';
@@ -20316,7 +20309,7 @@ namespace QuickFix.Fields
             :base(Tags.DisplayWhen, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char IMMEDIATE = '1';
         public const char EXHAUST = '2';
     }
@@ -20335,7 +20328,7 @@ namespace QuickFix.Fields
             :base(Tags.DisplayMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char INITIAL = '1';
         public const char NEW = '2';
         public const char RANDOM = '3';
@@ -20461,7 +20454,7 @@ namespace QuickFix.Fields
             :base(Tags.PriceProtectionScope, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char NONE = '0';
         public const char LOCAL = '1';
         public const char NATIONAL = '2';
@@ -20482,7 +20475,7 @@ namespace QuickFix.Fields
             :base(Tags.LotType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char ODD_LOT = '1';
         public const char ROUND_LOT = '2';
         public const char BLOCK_LOT = '3';
@@ -20503,7 +20496,7 @@ namespace QuickFix.Fields
             :base(Tags.PegPriceType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int LAST_PEG = 1;
         public const int MID_PRICE_PEG = 2;
         public const int OPENING_PEG = 3;
@@ -20604,7 +20597,7 @@ namespace QuickFix.Fields
             :base(Tags.TriggerType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char PARTIAL_EXECUTION = '1';
         public const char SPECIFIED_TRADING_SESSION = '2';
         public const char NEXT_AUCTION = '3';
@@ -20625,7 +20618,7 @@ namespace QuickFix.Fields
             :base(Tags.TriggerAction, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char ACTIVATE = '1';
         public const char MODIFY = '2';
         public const char CANCEL = '3';
@@ -20720,7 +20713,7 @@ namespace QuickFix.Fields
             :base(Tags.TriggerPriceType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char BEST_OFFER = '1';
         public const char LAST_TRADE = '2';
         public const char BEST_BID = '3';
@@ -20743,7 +20736,7 @@ namespace QuickFix.Fields
             :base(Tags.TriggerPriceTypeScope, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char NONE = '0';
         public const char LOCAL = '1';
         public const char NATIONAL = '2';
@@ -20764,7 +20757,7 @@ namespace QuickFix.Fields
             :base(Tags.TriggerPriceDirection, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char TRIGGER_IF_THE_PRICE_OF_THE_SPECIFIED_TYPE_GOES_UP_TO_OR_THROUGH_THE_SPECIFIED_TRIGGER_PRICE = 'U';
         public const char TRIGGER_IF_THE_PRICE_OF_THE_SPECIFIED_TYPE_GOES_DOWN_TO_OR_THROUGH_THE_SPECIFIED_TRIGGER_PRICE = 'D';
     }
@@ -20798,7 +20791,7 @@ namespace QuickFix.Fields
             :base(Tags.TriggerOrderType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char MARKET = '1';
         public const char LIMIT = '2';
     }
@@ -20862,7 +20855,7 @@ namespace QuickFix.Fields
             :base(Tags.OrderCategory, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char ORDER = '1';
         public const char QUOTE = '2';
         public const char PRIVATELY_NEGOTIATED_TRADE = '3';
@@ -20993,7 +20986,7 @@ namespace QuickFix.Fields
             :base(Tags.TradeHandlingInstr, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char TRADE_CONFIRMATION = '0';
         public const char TWO_PARTY_REPORT = '1';
         public const char ONE_PARTY_REPORT_FOR_MATCHING = '2';
@@ -21076,7 +21069,7 @@ namespace QuickFix.Fields
             :base(Tags.ApplVerID, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string FIX27 = "0";
         public const string FIX30 = "1";
         public const string FIX40 = "2";
@@ -21167,7 +21160,7 @@ namespace QuickFix.Fields
             :base(Tags.ExDestinationIDSource, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char BIC = 'B';
         public const char GENERALLY_ACCEPTED_MARKET_PARTICIPANT_IDENTIFIER = 'C';
         public const char PROPRIETARY = 'D';
@@ -21279,7 +21272,7 @@ namespace QuickFix.Fields
             :base(Tags.SecurityStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string ACTIVE = "1";
         public const string INACTIVE = "2";
     }
@@ -21298,7 +21291,7 @@ namespace QuickFix.Fields
             :base(Tags.ExpirationQtyType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int AUTO_EXERCISE = 1;
         public const int NON_AUTO_EXERCISE = 2;
         public const int FINAL_WILL_BE_EXERCISED = 3;
@@ -21380,7 +21373,7 @@ namespace QuickFix.Fields
             :base(Tags.ImpliedMarketIndicator, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NOT_IMPLIED = 0;
         public const int IMPLIED_IN = 1;
         public const int IMPLIED_OUT = 2;
@@ -21615,7 +21608,7 @@ namespace QuickFix.Fields
             :base(Tags.SettlObligMode, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PRELIMINARY = 1;
         public const int FINAL = 2;
     }
@@ -21664,7 +21657,7 @@ namespace QuickFix.Fields
             :base(Tags.SettlObligTransType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char CANCEL = 'C';
         public const char NEW = 'N';
         public const char REPLACE = 'R';
@@ -21700,7 +21693,7 @@ namespace QuickFix.Fields
             :base(Tags.SettlObligSource, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char INSTRUCTIONS_OF_BROKER = '1';
         public const char INSTRUCTIONS_FOR_INSTITUTION = '2';
         public const char INVESTOR = '3';
@@ -21750,7 +21743,7 @@ namespace QuickFix.Fields
             :base(Tags.QuoteEntryStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ACCEPTED = 0;
         public const int REJECTED = 5;
         public const int REMOVED_FROM_MARKET = 6;
@@ -21836,7 +21829,7 @@ namespace QuickFix.Fields
             :base(Tags.RespondentType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ALL_MARKET_PARTICIPANTS = 1;
         public const int SPECIFIED_MARKET_PARTICIPANTS = 2;
         public const int ALL_MARKET_MAKERS = 3;
@@ -21872,7 +21865,7 @@ namespace QuickFix.Fields
             :base(Tags.SecurityTradingEvent, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ORDER_IMBALANCE_AUCTION_IS_EXTENDED = 1;
         public const int TRADING_RESUMES = 2;
         public const int PRICE_VOLATILITY_INTERRUPTION = 3;
@@ -21913,7 +21906,7 @@ namespace QuickFix.Fields
             :base(Tags.StatsType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int EXCHANGE_LAST = 1;
         public const int HIGH = 2;
         public const int AVERAGE_PRICE = 3;
@@ -21949,7 +21942,7 @@ namespace QuickFix.Fields
             :base(Tags.MDSecSizeType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int CUSTOMER = 1;
     }
 
@@ -22177,7 +22170,7 @@ namespace QuickFix.Fields
             :base(Tags.SettlMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char CASH_SETTLEMENT_REQUIRED = 'C';
         public const char PHYSICAL_SETTLEMENT_REQUIRED = 'P';
     }
@@ -22196,7 +22189,7 @@ namespace QuickFix.Fields
             :base(Tags.ExerciseStyle, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int EUROPEAN = 0;
         public const int AMERICAN = 1;
         public const int BERMUDA = 2;
@@ -22231,7 +22224,7 @@ namespace QuickFix.Fields
             :base(Tags.PriceQuoteMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string STANDARD = "STD";
         public const string INDEX = "INX";
         public const string INTEREST_RATE_INDEX = "INT";
@@ -22252,7 +22245,7 @@ namespace QuickFix.Fields
             :base(Tags.FuturesValuationMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string PREMIUM_STYLE = "EQTY";
         public const string FUTURES_STYLE_MARK_TO_MARKET = "FUT";
         public const string FUTURES_STYLE_WITH_AN_ATTACHED_CASH_ADJUSTMENT = "FUTDA";
@@ -22272,7 +22265,7 @@ namespace QuickFix.Fields
             :base(Tags.ListMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PRE_LISTED_ONLY = 0;
         public const int USER_REQUESTED = 1;
     }
@@ -22441,7 +22434,7 @@ namespace QuickFix.Fields
             :base(Tags.TickRuleType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int REGULAR = 0;
         public const int VARIABLE = 1;
         public const int FIXED = 2;
@@ -23817,7 +23810,7 @@ namespace QuickFix.Fields
             :base(Tags.MaturityMonthYearIncrementUnits, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int MONTHS = 0;
         public const int DAYS = 1;
         public const int WEEKS = 2;
@@ -23838,7 +23831,7 @@ namespace QuickFix.Fields
             :base(Tags.MaturityMonthYearFormat, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int YEARMONTH_ONLY = 0;
         public const int YEARMONTHDAY = 1;
         public const int YEARMONTHWEEK = 2;
@@ -23888,7 +23881,7 @@ namespace QuickFix.Fields
             :base(Tags.PriceLimitType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PRICE = 0;
         public const int TICKS = 1;
         public const int PERCENTAGE = 2;
@@ -23908,7 +23901,7 @@ namespace QuickFix.Fields
             :base(Tags.DerivativeSecurityListRequestType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SYMBOL = 0;
         public const int SECURITYTYPE_AND_OR_CFICODE = 1;
         public const int PRODUCT = 2;
@@ -24519,7 +24512,7 @@ namespace QuickFix.Fields
             :base(Tags.ApplReqType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int RETRANSMISSION_OF_APPLICATION_MESSAGES_FOR_THE_SPECIFIED_APPLICATIONS = 0;
         public const int SUBSCRIPTION_TO_THE_SPECIFIED_APPLICATIONS = 1;
         public const int REQUEST_FOR_THE_LAST_APPLLASTSEQNUM_PUBLISHED_FOR_THE_SPECIFIED_APPLICATIONS = 2;
@@ -24543,7 +24536,7 @@ namespace QuickFix.Fields
             :base(Tags.ApplResponseType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int REQUEST_SUCCESSFULLY_PROCESSED = 0;
         public const int APPLICATION_DOES_NOT_EXIST = 1;
         public const int MESSAGES_NOT_AVAILABLE = 2;
@@ -24638,7 +24631,7 @@ namespace QuickFix.Fields
             :base(Tags.ApplResponseError, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int APPLICATION_DOES_NOT_EXIST = 0;
         public const int MESSAGES_REQUESTED_ARE_NOT_AVAILABLE = 1;
         public const int USER_NOT_AUTHORIZED_FOR_APPLICATION = 2;
@@ -24853,7 +24846,7 @@ namespace QuickFix.Fields
             :base(Tags.TradSesEvent, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int TRADING_RESUMES = 0;
         public const int CHANGE_OF_TRADING_SESSION = 1;
         public const int CHANGE_OF_TRADING_SUBSESSION = 2;
@@ -24934,7 +24927,7 @@ namespace QuickFix.Fields
             :base(Tags.MassActionType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SUSPEND_ORDERS = 1;
         public const int RELEASE_ORDERS_FROM_SUSPENSION = 2;
         public const int CANCEL_ORDERS = 3;
@@ -24954,7 +24947,7 @@ namespace QuickFix.Fields
             :base(Tags.MassActionScope, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ALL_ORDERS_FOR_A_SECURITY = 1;
         public const int ALL_ORDERS_FOR_AN_UNDERLYING_SECURITY = 2;
         public const int ALL_ORDERS_FOR_A_PRODUCT = 3;
@@ -24983,7 +24976,7 @@ namespace QuickFix.Fields
             :base(Tags.MassActionResponse, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int REJECTED = 0;
         public const int ACCEPTED = 1;
     }
@@ -25002,7 +24995,7 @@ namespace QuickFix.Fields
             :base(Tags.MassActionRejectReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int MASS_ACTION_NOT_SUPPORTED = 0;
         public const int INVALID_OR_UNKNOWN_SECURITY = 1;
         public const int INVALID_OR_UNKNOWN_UNDERLYING_SECURITY = 2;
@@ -25032,7 +25025,7 @@ namespace QuickFix.Fields
             :base(Tags.MultilegModel, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PREDEFINED_MULTILEG_SECURITY = 0;
         public const int USER_DEFINED_MULTLEG_SECURITY = 1;
         public const int USER_DEFINED_NON_SECURITIZED_MULTILEG = 2;
@@ -25052,7 +25045,7 @@ namespace QuickFix.Fields
             :base(Tags.MultilegPriceMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NET_PRICE = 0;
         public const int REVERSED_NET_PRICE = 1;
         public const int YIELD_DIFFERENCE = 2;
@@ -25165,7 +25158,7 @@ namespace QuickFix.Fields
             :base(Tags.ContingencyType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ONE_CANCELS_THE_OTHER = 1;
         public const int ONE_TRIGGERS_THE_OTHER = 2;
         public const int ONE_UPDATES_THE_OTHER_3 = 3;
@@ -25186,7 +25179,7 @@ namespace QuickFix.Fields
             :base(Tags.ListRejectReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int BROKER = 0;
         public const int EXCHANGE_CLOSED = 2;
         public const int TOO_LATE_TO_ENTER = 4;
@@ -25255,7 +25248,7 @@ namespace QuickFix.Fields
             :base(Tags.TradePublishIndicator, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int DO_NOT_PUBLISH_TRADE = 0;
         public const int PUBLISH_TRADE = 1;
         public const int DEFERRED_PUBLICATION = 2;
@@ -25335,7 +25328,7 @@ namespace QuickFix.Fields
             :base(Tags.MarketUpdateAction, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char ADD = 'A';
         public const char DELETE = 'D';
         public const char MODIFY = 'M';
@@ -25550,7 +25543,7 @@ namespace QuickFix.Fields
             :base(Tags.SessionStatus, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SESSION_ACTIVE = 0;
         public const int SESSION_PASSWORD_CHANGED = 1;
         public const int SESSION_PASSWORD_DUE_TO_EXPIRE = 2;
@@ -25816,7 +25809,7 @@ namespace QuickFix.Fields
             :base(Tags.ApplReportType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int RESET_APPLSEQNUM_TO_NEW_VALUE_SPECIFIED_IN_APPLNEWSEQNUM = 0;
         public const int REPORTS_THAT_THE_LAST_MESSAGE_HAS_BEEN_SENT_FOR_THE_APPLIDS_REFER_TO_REFAPPLLASTSEQNUM = 1;
         public const int HEARTBEAT_MESSAGE_INDICATING_THAT_APPLICATION_IDENTIFIED_BY_REFAPPLID = 2;
@@ -25837,7 +25830,7 @@ namespace QuickFix.Fields
             :base(Tags.HaltReasonInt, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NEWS_DISSEMINATION = 0;
         public const int ORDER_INFLUX = 1;
         public const int ORDER_IMBALANCE = 2;
@@ -25965,7 +25958,7 @@ namespace QuickFix.Fields
             :base(Tags.ValuationMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string PREMIUM_STYLE = "EQTY";
         public const string FUTURES_STYLE_MARK_TO_MARKET = "FUT";
         public const string FUTURES_STYLE_WITH_AN_ATTACHED_CASH_ADJUSTMENT = "FUTDA";
@@ -26032,7 +26025,7 @@ namespace QuickFix.Fields
             :base(Tags.OrderDelayUnit, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SECONDS = 0;
         public const int TENTHS_OF_A_SECOND = 1;
         public const int HUNDREDTHS_OF_A_SECOND = 2;
@@ -26061,7 +26054,7 @@ namespace QuickFix.Fields
             :base(Tags.VenueType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const char ELECTRONIC = 'E';
         public const char PIT = 'P';
         public const char EX_PIT = 'X';
@@ -26081,7 +26074,7 @@ namespace QuickFix.Fields
             :base(Tags.RefOrdIDReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int GTC_FROM_PREVIOUS_DAY = 0;
         public const int PARTIAL_FILL_REMAINING = 1;
         public const int ORDER_CHANGED = 2;
@@ -26101,7 +26094,7 @@ namespace QuickFix.Fields
             :base(Tags.OrigCustOrderCapacity, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int MEMBER_TRADING_FOR_THEIR_OWN_ACCOUNT = 1;
         public const int CLEARING_FIRM_TRADING_FOR_ITS_PROPRIETARY_ACCOUNT = 2;
         public const int MEMBER_TRADING_FOR_ANOTHER_MEMBER = 3;
@@ -26137,7 +26130,7 @@ namespace QuickFix.Fields
             :base(Tags.ModelType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int UTILITY_PROVIDED_STANDARD_MODEL = 0;
         public const int PROPRIETARY = 1;
     }
@@ -26156,7 +26149,7 @@ namespace QuickFix.Fields
             :base(Tags.ContractMultiplierUnit, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int SHARES = 0;
         public const int HOURS = 1;
         public const int DAYS = 2;
@@ -26221,7 +26214,7 @@ namespace QuickFix.Fields
             :base(Tags.FlowScheduleType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int NERC_EASTERN_OFF_PEAK = 0;
         public const int NERC_WESTERN_OFF_PEAK = 1;
         public const int NERC_CALENDAR_ALL_DAYS_IN_MONTH = 2;
@@ -26333,7 +26326,7 @@ namespace QuickFix.Fields
             :base(Tags.RateSource, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int BLOOMBERG = 0;
         public const int REUTERS = 1;
         public const int TELERATE = 2;
@@ -26354,7 +26347,7 @@ namespace QuickFix.Fields
             :base(Tags.RateSourceType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int PRIMARY = 0;
         public const int SECONDARY = 1;
     }
@@ -26388,7 +26381,7 @@ namespace QuickFix.Fields
             :base(Tags.RestructuringType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string FULL_RESTRUCTURING = "FR";
         public const string MODIFIED_RESTRUCTURING = "MR";
         public const string MODIFIED_MOD_RESTRUCTURING = "MM";
@@ -26409,7 +26402,7 @@ namespace QuickFix.Fields
             :base(Tags.Seniority, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const string SENIOR_SECURED = "SD";
         public const string SENIOR = "SR";
         public const string SUBORDINATED = "SB";
@@ -26714,7 +26707,7 @@ namespace QuickFix.Fields
             :base(Tags.SecurityListType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int INDUSTRY_CLASSIFICATION = 1;
         public const int TRADING_LIST = 2;
         public const int MARKET = 3;
@@ -26735,7 +26728,7 @@ namespace QuickFix.Fields
             :base(Tags.SecurityListTypeSource, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ICB = 1;
         public const int NAICS = 2;
         public const int GICS = 3;
@@ -26770,7 +26763,7 @@ namespace QuickFix.Fields
             :base(Tags.NewsCategory, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int COMPANY_NEWS = 0;
         public const int MARKETPLACE_NEWS = 1;
         public const int FINANCIAL_MARKET_NEWS = 2;
@@ -26837,7 +26830,7 @@ namespace QuickFix.Fields
             :base(Tags.NewsRefType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int REPLACEMENT = 0;
         public const int OTHER_LANGUAGE = 1;
         public const int COMPLIMENTARY = 2;
@@ -26857,7 +26850,7 @@ namespace QuickFix.Fields
             :base(Tags.StrikePriceDeterminationMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int FIXED_STRIKE = 1;
         public const int STRIKE_SET_AT_EXPIRATION_TO_UNDERLYING_OR_OTHER_VALUE = 2;
         public const int STRIKE_SET_TO_AVERAGE_OF_UNDERLYING_SETTLEMENT_PRICE_ACROSS_THE_LIFE_OF_THE_OPTION = 3;
@@ -26878,7 +26871,7 @@ namespace QuickFix.Fields
             :base(Tags.StrikePriceBoundaryMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int LESS_THAN_UNDERLYING_PRICE_IS_IN_THE_MONEY = 1;
         public const int LESS_THAN_OR_EQUAL_TO_THE_UNDERLYING_PRICE_IS_IN_THE_MONEY = 2;
         public const int EQUAL_TO_THE_UNDERLYING_PRICE_IS_IN_THE_MONEY = 3;
@@ -26915,7 +26908,7 @@ namespace QuickFix.Fields
             :base(Tags.UnderlyingPriceDeterminationMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int REGULAR = 1;
         public const int SPECIAL_REFERENCE = 2;
         public const int OPTIMAL_VALUE = 3;
@@ -26936,7 +26929,7 @@ namespace QuickFix.Fields
             :base(Tags.OptPayoutType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int VANILLA = 1;
         public const int CAPPED = 2;
         public const int BINARY = 3;
@@ -26971,7 +26964,7 @@ namespace QuickFix.Fields
             :base(Tags.ComplexEventType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int CAPPED = 1;
         public const int TRIGGER = 2;
         public const int KNOCK_IN_UP = 3;
@@ -27027,7 +27020,7 @@ namespace QuickFix.Fields
             :base(Tags.ComplexEventPriceBoundaryMethod, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int LESS_THAN_COMPLEXEVENTPRICE = 1;
         public const int LESS_THAN_OR_EQUAL_TO_COMPLEXEVENTPRICE = 2;
         public const int EQUAL_TO_COMPLEXEVENTPRICE = 3;
@@ -27064,7 +27057,7 @@ namespace QuickFix.Fields
             :base(Tags.ComplexEventPriceTimeType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int EXPIRATION = 1;
         public const int IMMEDIATE = 2;
         public const int SPECIFIED_DATE_TIME = 3;
@@ -27084,7 +27077,7 @@ namespace QuickFix.Fields
             :base(Tags.ComplexEventCondition, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int AND = 1;
         public const int OR = 2;
     }
@@ -27224,7 +27217,7 @@ namespace QuickFix.Fields
             :base(Tags.StreamAsgnReqType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int STREAM_ASSIGNMENT_FOR_NEW_CUSTOMER = 1;
         public const int STREAM_ASSIGNMENT_FOR_EXISTING_CUSTOMER = 2;
     }
@@ -27288,7 +27281,7 @@ namespace QuickFix.Fields
             :base(Tags.StreamAsgnRejReason, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int UNKNOWN_CLIENT = 0;
         public const int EXCEEDS_MAXIMUM_SIZE = 1;
         public const int UNKNOWN_OR_INVALID_CURRENCY_PAIR = 2;
@@ -27310,7 +27303,7 @@ namespace QuickFix.Fields
             :base(Tags.StreamAsgnAckType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ASSIGNMENT_ACCEPTED = 0;
         public const int ASSIGNMENT_REJECTED = 1;
     }
@@ -27378,7 +27371,7 @@ namespace QuickFix.Fields
             :base(Tags.PartyListResponseType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int RETURN_ALL_AVAILABLE_INFORMATION_ON_PARTIES_AND_RELATED_PARTIES = 0;
         public const int RETURN_ONLY_PARTY_INFORMATION = 1;
         public const int INCLUDE_INFORMATION_ON_RELATED_PARTIES = 2;
@@ -27444,7 +27437,7 @@ namespace QuickFix.Fields
             :base(Tags.PartyDetailsRequestResult, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int VALID_REQUEST = 0;
         public const int INVALID_OR_UNSUPPORTED_REQUEST = 1;
         public const int NO_PARTIES_OR_PARTY_DETAILS_FOUND_THAT_MATCH_SELECTION_CRITERIA = 2;
@@ -27514,7 +27507,7 @@ namespace QuickFix.Fields
             :base(Tags.PartyRelationship, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int IS_ALSO = 0;
         public const int CLEARS_FOR = 1;
         public const int CLEARS_THROUGH = 2;
@@ -27778,7 +27771,7 @@ namespace QuickFix.Fields
             :base(Tags.RiskLimitType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int GROSS_LIMIT = 1;
         public const int NET_LIMIT = 2;
         public const int EXPOSURE = 3;
@@ -27860,7 +27853,7 @@ namespace QuickFix.Fields
             :base(Tags.RiskInstrumentOperator, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int INCLUDE = 1;
         public const int EXCLUDE = 2;
     }
@@ -29094,7 +29087,7 @@ namespace QuickFix.Fields
             :base(Tags.StreamAsgnType, val) {}
 
 
-        // Field Enumerations
+        // Перечисления полей
         public const int ASSIGNMENT = 1;
         public const int REJECTED = 2;
         public const int TERMINATE_UNASSIGN = 3;
