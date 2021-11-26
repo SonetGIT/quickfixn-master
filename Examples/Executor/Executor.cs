@@ -480,8 +480,6 @@ namespace Executor
             }
         }
 
-
-
         public void OnMessage(QuickFix.FIX40.OrderCancelReplaceRequest msg, SessionID s)
         {
             string orderid = (msg.IsSetOrderID()) ? msg.OrderID.Obj : "unknown orderID";
@@ -589,15 +587,11 @@ namespace Executor
             }
         }
 
-
-
-
         // FIX40-41 don't have rejects
         public void OnMessage(QuickFix.FIX42.BusinessMessageReject n, SessionID s) { }
         public void OnMessage(QuickFix.FIX43.BusinessMessageReject n, SessionID s) { }
         public void OnMessage(QuickFix.FIX44.BusinessMessageReject n, SessionID s) { }
         public void OnMessage(QuickFix.FIX50.BusinessMessageReject n, SessionID s) { }
-
 
         #endregion //MessageCracker overloads
     }

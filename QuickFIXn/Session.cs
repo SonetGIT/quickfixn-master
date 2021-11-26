@@ -627,7 +627,6 @@ namespace QuickFix
                     this.SessionDataDictionary.Validate(message, beginString, msgType);
                 }
 
-
                 if (MsgType.LOGON.Equals(msgType))
                     NextLogon(message);
                 else if (MsgType.LOGOUT.Equals(msgType))

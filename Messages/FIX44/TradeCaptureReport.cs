@@ -7,6 +7,7 @@ namespace QuickFix
     {
         public class TradeCaptureReport : Message
         {
+            //Клиент присылает на FIX gate сообщение Trade Capture Report (MsgType = AE), содержащее одну сделку.
             public const string MsgType = "AE";
 
             public TradeCaptureReport() : base()

@@ -42,9 +42,7 @@ namespace SimpleAcceptor
                 IApplication app = new SimpleAcceptorApp();
                 IMessageStoreFactory storeFactory = new FileStoreFactory(settings);
                 ILogFactory logFactory = new FileLogFactory(settings);
-                IAcceptor acceptor = new ThreadedSocketAcceptor(app, storeFactory, settings, logFactory);
-
-                
+                IAcceptor acceptor = new ThreadedSocketAcceptor(app, storeFactory, settings, logFactory);                
 
                 acceptor.Start();
                 Console.WriteLine("Нажмите <enter>, чтобы выйти");

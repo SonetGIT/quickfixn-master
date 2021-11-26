@@ -7,6 +7,7 @@ namespace QuickFix
     {
         public class TestRequest : Message
         {
+            //Сообщение вызывает/инициирует/запрашивает Heartbeat сообщение с противоположной стороны.
             public const string MsgType = "1";
 
             public TestRequest() : base()

@@ -123,7 +123,7 @@ namespace QuickFix.Fields.Converters
             }
             catch (System.Exception e)
             {
-                throw new FieldConvertError("Could not convert string (" + str + ") to DateTime: " + e.Message, e);
+                throw new FieldConvertError("Не удалось преобразовать строку (" + str + ") в DateTime: " + e.Message, e);
             }
         }
 
@@ -141,7 +141,7 @@ namespace QuickFix.Fields.Converters
             }
             catch (System.Exception e)
             {
-                throw new FieldConvertError("Could not convert string (" + str + ") to DateOnly: " + e.Message, e);
+                throw new FieldConvertError("Не удалось преобразовать строку (" + str + ") в DateOnly: " + e.Message, e);
             }
         }
 
@@ -180,7 +180,7 @@ namespace QuickFix.Fields.Converters
             }
             catch (System.Exception e)
             {
-                throw new FieldConvertError("Could not convert string (" + str + ") to TimeOnly: " + e.Message, e);
+                throw new FieldConvertError("Не удалось преобразовать строку (" + str + ") в TimeOnly: " + e.Message, e);
             }
         }
 
@@ -199,7 +199,7 @@ namespace QuickFix.Fields.Converters
             }
             catch (System.Exception e)
             {
-                throw new FieldConvertError("Could not convert string (" + str + ") to TimeSpan: " + e.Message, e);
+                throw new FieldConvertError("Не удалось преобразовать строку (" + str + ") в TimeSpan: " + e.Message, e);
             }
         }
 

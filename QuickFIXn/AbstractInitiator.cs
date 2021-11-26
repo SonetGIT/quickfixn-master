@@ -225,7 +225,6 @@ namespace QuickFix
                 disconnected_.Clear();
             }
         }
-
         public bool IsLoggedOn
         {
             get

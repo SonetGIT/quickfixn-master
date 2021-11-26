@@ -7,6 +7,8 @@ namespace QuickFix
     {
         public class SequenceReset : Message
         {
+            /* Используется при повторной пересылке для пропуска административных сообщений - Gap Fill mode. Используется для сброса
+               счётчика номеров сообщений - Reset mode.*/
             public const string MsgType = "4";
 
             public SequenceReset() : base()

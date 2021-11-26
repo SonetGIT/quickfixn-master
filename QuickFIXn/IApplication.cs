@@ -14,6 +14,24 @@ namespace QuickFix
     public interface IApplication
     {
         // <summary>
+        /* уведомляет об успешном входе в систему */
+        // </summary>
+        /// <param name="sessionID"></param>
+        void OnLogon(SessionID sessionID);
+
+        // <summary>
+        /* уведомляет, когда сеанс находится в автономном режиме - либо из-за обмена сообщениями о выходе из системы, либо из-за потери сетевого подключения */
+        // </summary>
+        /// <param name="sessionID"></param>
+        void OnLogout(SessionID sessionID);
+
+        // <summary>
+        /* этот метод вызывается всякий раз, когда создается новый сеанс */
+        // </summary>
+        /// <param name="sessionID"></param>
+        void OnCreate(SessionID sessionID);
+
+        // <summary>
         /* через этот метод будет проходить каждое входящее сообщение уровня приложения, 
            такое как приказы, исполнения, определения безопасности и рыночные данные */
         // </summary>
@@ -23,24 +41,6 @@ namespace QuickFix
         /// <exception cref="UnsupportedMessageType"> выводим исключения, чтобы уведомить контрагента, что мы не можем обработать это сообщение </exception>
         /// <exception cref="IncorrectTagValue"> выводим исключения, чтобы уведомить контрагента о том, что поле содержит неверное значение </exception>
         void FromApp(Message message, SessionID sessionID);
-
-        // <summary>
-        /* этот метод вызывается всякий раз, когда создается новый сеанс */
-        // </summary>
-        /// <param name="sessionID"></param>
-        void OnCreate(SessionID sessionID);
-
-        // <summary>
-        /* уведомляет, когда сеанс находится в автономном режиме - либо из-за обмена сообщениями о выходе из системы, либо из-за потери сетевого подключения */
-        // </summary>
-        /// <param name="sessionID"></param>
-        void OnLogout(SessionID sessionID);
-
-        // <summary>
-        /* уведомляет об успешном входе в систему */
-        // </summary>
-        /// <param name="sessionID"></param>
-        void OnLogon(SessionID sessionID);
 
         // <summary>
         /* каждое входящее сообщение уровня администратора будет проходить через этот метод, например контрольные сообщения, вход в систему и выход из системы */

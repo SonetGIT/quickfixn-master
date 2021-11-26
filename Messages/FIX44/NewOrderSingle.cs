@@ -7,6 +7,7 @@ namespace QuickFix
     {
         public class NewOrderSingle : Message
         {
+            // "Новая заявка"
             public const string MsgType = "D";
 
             public NewOrderSingle() : base()
@@ -209,8 +210,7 @@ namespace QuickFix
             public bool IsSet(QuickFix.Fields.TradeDate val) 
             { 
                 return IsSetTradeDate();
-            }
-            
+            }            
             public bool IsSetTradeDate() 
             { 
                 return IsSetField(Tags.TradeDate);

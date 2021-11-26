@@ -5,8 +5,10 @@ namespace QuickFix
 {
     namespace FIX44 
     {
+        //Сообщение, инициирующее или подтверждающее установку сессии. Должно быть первым сообщением в каждом подключении.
         public class Logon : Message
         {
+            //MsgType = "A" - подтверждает подлинность пользователя устанавливающего соединение с удаленной системой. 
             public const string MsgType = "A";
 
             public Logon() : base()

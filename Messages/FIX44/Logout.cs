@@ -7,6 +7,7 @@ namespace QuickFix
     {
         public class Logout : Message
         {
+            // MsgType = "5" - Сообщение, инициирующее или подтверждающее завершение сессии.
             public const string MsgType = "5";
 
             public Logout() : base()

@@ -7,28 +7,33 @@ namespace QuickFix.Fields
     /// </summary>/
     public static class Tags
     {
-        public const int Account = 1;
+        /*
+           Y - обязательное поле;
+           N - необязательное поле;
+           C - обязательно при выполнении условия(указано в графе Описание).
+        */
+        public const int Account = 1; //Торговый счет
         public const int AdvId = 2;
         public const int AdvRefID = 3;
         public const int AdvSide = 4;
         public const int AdvTransType = 5;
-        public const int AvgPx = 6;
-        public const int BeginSeqNo = 7;
-        public const int BeginString = 8; //Начало сообщения
-        public const int BodyLength = 9; //Длина сообщения
-        public const int CheckSum = 10;
-        public const int ClOrdID = 11;
-        public const int Commission = 12;
-        public const int CommType = 13;
-        public const int CumQty = 14;
-        public const int Currency = 15;
-        public const int EndSeqNo = 16;
-        public const int ExecID = 17;
+        public const int AvgPx = 6; //Средневзвешенная цена сделок по заявке.
+        public const int BeginSeqNo = 7; // (Y) Номер первого сообщения, которое нужно повторно переслать. Тип сообщения "2".
+        public const int BeginString = 8; //Определяет начало нового сообщения и версию протокола. (Y)
+        public const int BodyLength = 9; //Длина сообщения. Рассчитывается в соответствии со стандартом. (Y)
+        public const int CheckSum = 10; //Контрольная сумма сообщения. Методика расчета описана в спецификации FIX (Y).
+        public const int ClOrdID = 11; //ID заявки на снятие заявки. Уникальный идентификатор сообщения Order Cancel Request (F) - запроса на снятие заявки.
+        public const int Commission = 12; //Размер комиссии, выраженный в рублях (для фондового и валютного рынков).
+        public const int CommType = 13; //Тип комиссии. '3' (абсолютная величина комиссии (суммарная величина, выраженная в валюте расчетов)); ‘100’ (величина комиссии, взимаемой за исполнение сделки срочным отчетом).
+        public const int CumQty = 14; //Исполненная часть заявки.
+        public const int Currency = 15; //Код валюты цены: "RUB" - рубли, "USD" - доллары США, "EUR" - евро, код "PCT" - процент от номинала(для сделок по облигациям)*/
+        public const int EndSeqNo = 16; // (Y) Номер последнего сообщения, которое нужно повторно переслать. Тип сообщения "2".
+        public const int ExecID = 17; //Уникальный идентификатор отчета об исполнении заявки
         public const int ExecInst = 18;
         public const int ExecRefID = 19;
         public const int ExecTransType = 20;
         public const int HandlInst = 21;
-        public const int IDSource = 22;
+        public const int IDSource = 22; //Код ISIN инструмента, с которым совершена сделка (опциональное поле). Зна-чение по умолчанию "".
         public const int IOIid = 23;
         public const int IOIOthSvc = 24;
         public const int IOIQltyInd = 25;
@@ -37,38 +42,51 @@ namespace QuickFix.Fields
         public const int IOITransType = 28;
         public const int LastCapacity = 29;
         public const int LastMkt = 30;
-        public const int LastPx = 31;
-        public const int LastShares = 32;
+        public const int LastPx = 31; /* Цена одной ценной бумаги по сделке. При приеме отчета цена будет усечена до 5 знаков после запятой. 
+                                         Исходная цена будет сохранена в БД системы ОТС-монитор в отдельном поле. */
+        public const int LastShares = 32; //Количество ценных бумаг по сделке. 
         public const int LinesOfText = 33;
-        public const int MsgSeqNum = 34; //Номер сообщения
-        public const int MsgType = 35; //Тип сообщения
-        public const int NewSeqNo = 36;
-        public const int OrderID = 37;
-        public const int OrderQty = 38;
-        public const int OrdStatus = 39;
-        public const int OrdType = 40;
-        public const int OrigClOrdID = 41;
+        public const int MsgSeqNum = 34; //Порядковый номер сообщения (Y).
+        public const int MsgType = 35; //Тип сообщения (Y)
+        public const int NewSeqNo = 36; //(Y) Новый порядковый номер. Тип сообщения "4".
+        public const int OrderID = 37; //Биржевой номер заявки, которую надо снять.
+        public const int OrderQty = 38; //Количество ценных бумаг, выраженное в лотах.
+        public const int OrdStatus = 39; //Текущий статус заявки.
+        public const int OrdType = 40; //Тип заявки. '1' (Рыночная) '2' (Лимитная)
+        public const int OrigClOrdID = 41; //Пользовательский идентификатор заявки, используется при снятии /изменении заявки.
         public const int OrigTime = 42;
-        public const int PossDupFlag = 43;
-        public const int Price = 44;
-        public const int RefSeqNum = 45;
+        public const int PossDupFlag = 43; //Идентификатор, показывающий возможную повторную пересылку сообщения под тем же порядковым номером (N).
+        public const int Price = 44; //Цена заявки, используется для лимитной заявки. Поле обязательное, если задано в заявке. Для рыночных заявок должно быть заполнено 0.
+        public const int RefSeqNum = 45; //Номер отвергнутого сообщения. Тип сообщения "3".
         public const int RelatdSym = 46;
         public const int Rule80A = 47;
         public const int SecurityID = 48;
-        public const int SenderCompID = 49; //Идентификатор отправителя
+        public const int SenderCompID = 49; //(Y) Идентификатор фирмы – отправителя сообщения. Допустимые знач-я для поля опред-ся биржей индивидуально для каждой торговой фирмы(брокера).
         public const int SenderSubID = 50;
-        public const int SendingTime = 52; //Время отправки
+        public const int SendingTime = 52; //Время отправки сообщения (Y).
         public const int Shares = 53;
-        public const int Side = 54;
-        public const int Symbol = 55;
-        public const int TargetCompID = 56;
+        public const int Side = 54; // Направление заявки. "1" - покупка, "2" - продажа
+        public const int Symbol = 55; //Код ценной бумаги для акций или ISIN для облигаций и паёв (именная ценная бумага).
+        public const int TargetCompID = 56; //(Y) Идентификатор фирмы – получателя сообщения (идентификатор FIX-шлюза).
         public const int TargetSubID = 57;
-        public const int Text = 58;
-        public const int TimeInForce = 59;
-        public const int TransactTime = 60;
+        public const int Text = 58; /* Тип сообщения "5". Logout.cs. Причина завершения сессии.
+                                       Тип сообщения "3". Reject.cs Расшифровка причины. 
+                                       Тип сообщения "AR".TradeCaptureReportAck.cs 
+                                        Поле содержит:
+                                        • описание выявленных ошибок из-за которых добавление сделки невозможно в том случае, если сделка не принята;
+                                        • описание выявленных замечаний при обработке сделки в том случае, если сделка принята.        
+                                        Описание выявленных ошибок из-за которых удаление сделки невозможно. Поле передается в том случае, если сделку не удалось удалить.
+                                        Тип сообщения "AE". TradeCaptureReport.cs Текст сообщения об особенностях обработки в случае приема отчета о сделке. */
+        public const int TimeInForce = 59; //Время действия заявки, определяет, как долго заявка является действительной.
+        public const int TransactTime = 60; //Время формирования этого сообщения.
         public const int Urgency = 61;
         public const int ValidUntilTime = 62;
-        public const int SettlmntTyp = 63;
+        public const int SettlmntTyp = 63; /*Период времени в течение которого стороны обязаны исполнить обязательства по сделке:
+                                            • "D5" - до 5 календарных дней с даты заключения сделки
+                                            • "D30" - от 6 до 30 календарных дней с даты заключения сделки включительно
+                                            • "M1+" - более 30 календарных дней с даты заключения сделки 
+                                            В случае если дата оплаты и дата поставки не совпадают, то для определения
+                                            значения этого поля используется поздняя из двух дат.*/
         public const int FutSettDate = 64;
         public const int SymbolSfx = 65;
         public const int ListID = 66;
@@ -80,7 +98,7 @@ namespace QuickFix.Fields
         public const int RefAllocID = 72;
         public const int NoOrders = 73;
         public const int AvgPrxPrecision = 74;
-        public const int TradeDate = 75;
+        public const int TradeDate = 75; //Дата заключения сделки в ГГГГММДД формате. Если дата не определена, датой заключения сделки считается текущая дата по местному времени, где проходили торги.
         public const int ExecBroker = 76;
         public const int OpenClose = 77;
         public const int NoAllocs = 78;
@@ -89,7 +107,8 @@ namespace QuickFix.Fields
         public const int ProcessCode = 81;
         public const int NoRpts = 82;
         public const int RptSeq = 83;
-        public const int CxlQty = 84;
+        public const int CxlQty = 84; /*Указывает на снятый объем заявки для случая автоматического снятия остатка частично исполненной заявки при отказе ее изменить и включенном флаге CancelOrigOnReject. 
+                                        Это поле позволяет узнать объем снимаемой заявки до получения сообщений о сделках.*/
         public const int NoDlvyInst = 85;
         public const int DlvyInst = 86;
         public const int AllocStatus = 87;
@@ -102,32 +121,35 @@ namespace QuickFix.Fields
         public const int EmailType = 94;
         public const int RawDataLength = 95;
         public const int RawData = 96;
-        public const int PossResend = 97;
-        public const int EncryptMethod = 98;
+        public const int PossResend = 97; //(N) Индикатор, показывающий, что сообщение может содержать информацию, которая была отправлена под другим порядковым номером.
+        public const int EncryptMethod = 98; //(Y) Метод шифрования. Должно быть указано "0" – NONE_OTHER – шифрование со-общений отключено. Тип сообщения "A". Logon.cs.
         public const int StopPx = 99;
         public const int ExDestination = 100;
-        public const int CxlRejReason = 102;
-        public const int OrdRejReason = 103;
+        public const int CxlRejReason = 102; //Причина отклонения запроса на снятие заявки.
+        public const int OrdRejReason = 103;  //Причина отклонения заявки. Указывается для ExecType = ‘8’.
         public const int IOIQualifier = 104;
         public const int WaveNo = 105;
         public const int Issuer = 106;
         public const int SecurityDesc = 107;
-        public const int HeartBtInt = 108;
+        public const int HeartBtInt = 108; //(Y) Интервал ожидания торговых сообщений или соб-й Heartbeat. Тип сообщения "A". Logon.cs.
         public const int ClientID = 109;
         public const int MinQty = 110;
-        public const int MaxFloor = 111;
-        public const int TestReqID = 112;
+        public const int MaxFloor = 111; //Максимальное количество лотов в пределах объема заявки, которое будет показано на бирже в любой момент времени (Для заявок типа Айсберг).
+        public const int TestReqID = 112; //(N) Требуется указать идентификатор TestRequest.cs, если сообщение является ответом на него. Идентификатор запроса, возвращается в ответном Heartbeat.cs.
         public const int ReportToExch = 113;
         public const int LocateReqd = 114;
         public const int OnBehalfOfCompID = 115;
         public const int OnBehalfOfSubID = 116;
         public const int QuoteID = 117;
         public const int NetMoney = 118;
-        public const int SettlCurrAmt = 119;
-        public const int SettlCurrency = 120;
+        public const int SettlCurrAmt = 119; //Объем сделки по номиналу, выраженный в валюте номинала.
+        public const int SettlCurrency = 120; //Код валюты расчетов:"RUB"-рубли, "USD"-доллары, "EUR"-евро или код "PCT"- % от номинала(для сделок по облигациям)Значение по умолчанию "".
         public const int ForexReq = 121;
-        public const int OrigSendingTime = 122;
-        public const int GapFillFlag = 123;
+        public const int OrigSendingTime = 122; //Настоящее/оригинальное время передачи сообщения при пересылке сообщений в ответ на запрос о пересылке (сообщение Resend Request (2)), выражено в UTC формате.
+        public const int GapFillFlag = 123; /* "Y" - Gap Fill mode - Режим заполнения пробелов (используется поле MsgSeqNum).
+                                                     В этом режиме сообщение используется как ответ на Resend Request в случае,
+                                                     когда одно или несколько сообщений должны быть пропущены.
+                                               "N" - Reset mode - Режим сброса счётчика номеров сообщений.*/
         public const int NoExecs = 124;
         public const int CxlType = 125;
         public const int ExpireTime = 126;
@@ -140,12 +162,12 @@ namespace QuickFix.Fields
         public const int OfferPx = 133;
         public const int BidSize = 134;
         public const int OfferSize = 135;
-        public const int NoMiscFees = 136;
-        public const int MiscFeeAmt = 137;
+        public const int NoMiscFees = 136; //Количество элементов в группе MiscFees (только для фондового рынка). Суммарная комиссия по сделке, которая была заключена на основе данной заявки.
+        public const int MiscFeeAmt = 137; //Значение комиссии по сделке.
         public const int MiscFeeCurr = 138;
-        public const int MiscFeeType = 139;
+        public const int MiscFeeType = 139; //Тип комиссии по сделке.
         public const int PrevClosePx = 140;
-        public const int ResetSeqNumFlag = 141;
+        public const int ResetSeqNumFlag = 141; // (N) Если этот флаг установлен, то обе стороны должны сбросить счётчики сообщений. Тип сообщения "A". Logon.cs.
         public const int SenderLocationID = 142;
         public const int TargetLocationID = 143;
         public const int OnBehalfOfLocationID = 144;
@@ -154,16 +176,16 @@ namespace QuickFix.Fields
         public const int Subject = 147;
         public const int Headline = 148;
         public const int URLLink = 149;
-        public const int ExecType = 150;
-        public const int LeavesQty = 151;
-        public const int CashOrderQty = 152;
+        public const int ExecType = 150; //Тип отчета об исполнении заявки, который описывает назначение отчета.
+        public const int LeavesQty = 151; //Неисполненная часть заявки.
+        public const int CashOrderQty = 152; //Объем заявки в единицах денежных средств.
         public const int AllocAvgPx = 153;
         public const int AllocNetMoney = 154;
         public const int SettlCurrFxRate = 155;
         public const int SettlCurrFxRateCalc = 156;
         public const int NumDaysInterest = 157;
         public const int AccruedInterestRate = 158;
-        public const int AccruedInterestAmt = 159;
+        public const int AccruedInterestAmt = 159; //Накопленный купонный доход по сделке для конвертируемых облигаций или финансовых инструментов с фиксированным доходом (только для фондового рынка).
         public const int SettlInstMode = 160;
         public const int AllocText = 161;
         public const int SettlInstID = 162;
@@ -171,8 +193,8 @@ namespace QuickFix.Fields
         public const int EmailThreadID = 164;
         public const int SettlInstSource = 165;
         public const int SettlLocation = 166;
-        public const int SecurityType = 167;
-        public const int EffectiveTime = 168;
+        public const int SecurityType = 167; //Тип финансового инструмента. Для заявок в режиме РЕПО с ЦК необходимо указание этого поля как 167=REPO, в противном случае заявка будет отклонена.
+        public const int EffectiveTime = 168; //Время активации заявки, выражено в UTC (только для фондового рынка).
         public const int StandInstDbType = 169;
         public const int StandInstDbName = 170;
         public const int StandInstDbID = 171;
@@ -233,21 +255,21 @@ namespace QuickFix.Fields
         public const int MDUpdateType = 265;
         public const int AggregatedBook = 266;
         public const int NoMDEntryTypes = 267;
-        public const int NoMDEntries = 268;
+        public const int NoMDEntries = 268; //Количество записей в сообщении с рыночными данными.
         public const int MDEntryType = 269;
-        public const int MDEntryPx = 270;
-        public const int MDEntrySize = 271;
+        public const int MDEntryPx = 270; //Цена рыночных данных.
+        public const int MDEntrySize = 271; //Количество акций, представленных вводом рыночных данных.
         public const int MDEntryDate = 272;
         public const int MDEntryTime = 273;
         public const int TickDirection = 274;
         public const int MDMkt = 275;
         public const int QuoteCondition = 276;
         public const int TradeCondition = 277;
-        public const int MDEntryID = 278;
-        public const int MDUpdateAction = 279;
+        public const int MDEntryID = 278; //Уникальный идентификатор ввода рыночных данных
+        public const int MDUpdateAction = 279; //Тип действия обновления рыночных данных.
         public const int MDEntryRefID = 280;
         public const int MDReqRejReason = 281;
-        public const int MDEntryOriginator = 282;
+        public const int MDEntryOriginator = 282; //Автор ввода рыночных данных
         public const int LocationID = 283;
         public const int DeskID = 284;
         public const int DeleteReason = 285;
@@ -276,7 +298,7 @@ namespace QuickFix.Fields
         public const int UnderlyingSecurityExchange = 308;
         public const int UnderlyingSecurityID = 309;
         public const int UnderlyingSecurityType = 310;
-        public const int UnderlyingSymbol = 311;
+        public const int UnderlyingSymbol = 311; //Дополнительная информация о финансовом инструменте (только для фондового рынка).
         public const int UnderlyingSymbolSfx = 312;
         public const int UnderlyingMaturityMonthYear = 313;
         public const int UnderlyingMaturityDay = 314;
@@ -290,7 +312,7 @@ namespace QuickFix.Fields
         public const int SecurityResponseID = 322;
         public const int SecurityResponseType = 323;
         public const int SecurityStatusReqID = 324;
-        public const int UnsolicitedIndicator = 325;
+        public const int UnsolicitedIndicator = 325; //Индикатор, который показывает, отправляется ли это сообщение по запросу/подписке (в ответ на Trading Session Status Request (g)) или нет.
         public const int SecurityTradingStatus = 326;
         public const int HaltReason = 327;
         public const int InViewOfCommon = 328;
@@ -301,11 +323,11 @@ namespace QuickFix.Fields
         public const int LowPx = 333;
         public const int Adjustment = 334;
         public const int TradSesReqID = 335;
-        public const int TradingSessionID = 336;
+        public const int TradingSessionID = 336; //Идентификатор торговой сессии. Идентификатор режима торгов для финансового инструмента, заявки по которому должны быть сняты.
         public const int ContraTrader = 337;
         public const int TradSesMethod = 338;
         public const int TradSesMode = 339;
-        public const int TradSesStatus = 340;
+        public const int TradSesStatus = 340; //Статус торговой сессии.
         public const int TradSesStartTime = 341;
         public const int TradSesOpenTime = 342;
         public const int TradSesPreCloseTime = 343;
@@ -336,22 +358,42 @@ namespace QuickFix.Fields
         public const int QuoteEntryRejectReason = 368;
         public const int LastMsgSeqNumProcessed = 369;
         public const int OnBehalfOfSendingTime = 370;
-        public const int RefTagID = 371;
-        public const int RefMsgType = 372;
-        public const int SessionRejectReason = 373;
+        public const int RefTagID = 371; //Номер некорректного поля. Тип сообщения "3".
+        public const int RefMsgType = 372; //Тип отклонённого сообщения. Тип сообщения "3".
+        public const int SessionRejectReason = 373; //Код причины отклонения сообщения. Тип сообщения "3".
+                                                    /* '0' (Некорректный тег) '1' (Пропущено обязательное поле) 
+                                                     * '2' (Тег не определен для сообщения такого типа) 
+                                                     * '3' (Неопределенный тег) 
+                                                     * '4' (Значение для этого тега не указано)
+                                                     * '5' (Указано некорректное значение для этого тега (значение выходит за допустимые пределы)) 
+                                                     * '6' (Некорректный формат данных для значения) 
+                                                     * '7' (Проблемы расшифровки)
+                                                     * '8' (Проблемы подписи) 
+                                                     * '9' (Проблемы с CompID) 
+                                                     * '10' (Проблемы с правильностью/точностью SendingTime) 
+                                                     * '11' (Некорректный тип сообщения) 
+                                                     * '12' (Проблемы при валидации XML)
+                                                     * '13' (Тег встречается больше, чем один раз) 
+                                                     * '14' (Теги определены не в соответствующем порядке)
+                                                     * '15' (Поля группы определены не в соответствующем порядке) 
+                                                     * '16' (Неправильно рассчитано количество элементов в группе (NumInGroup)) 
+                                                     * '17' (Значения поля, у которого тип не "data", содержит разделитель) 
+                                                     * '99' (Другое) */
+
         public const int BidRequestTransType = 374;
         public const int ContraBroker = 375;
         public const int ComplianceID = 376;
         public const int SolicitedFlag = 377;
-        public const int ExecRestatementReason = 378;
+        public const int ExecRestatementReason = 378; //Причина снятия заявки, используется, если заявка была снята Торговой системой.
         public const int BusinessRejectRefID = 379;
         public const int BusinessRejectReason = 380;
-        public const int GrossTradeAmt = 381;
+        public const int GrossTradeAmt = 381;  //Объем сделки, выраженный в рублях.
         public const int NoContraBrokers = 382;
         public const int MaxMessageSize = 383;
         public const int NoMsgTypes = 384;
         public const int MsgDirection = 385;
-        public const int NoTradingSessions = 386;
+        public const int NoTradingSessions = 386; //Количество элементов в группе TradingSessionIDs. Гр. должна содержать один элемент, иначе заявка будет отклонена.
+                                                  //Примечание: поля 386 и 336 образуют группу и должны следовать в сообщении строго друг за другом, между ними не должно быть никаких других полей.
         public const int TotalVolumeTraded = 387;
         public const int DiscretionInst = 388;
         public const int DiscretionOffset = 389;
@@ -388,7 +430,7 @@ namespace QuickFix.Fields
         public const int NoBidComponents = 420;
         public const int Country = 421;
         public const int TotNoStrikes = 422;
-        public const int PriceType = 423;
+        public const int PriceType = 423; //Тип цены заявки (только для фондового рынка). Примечание: Для заявок РЕПО с ЦК указывается как ставка РЕПО
         public const int DayOrderQty = 424;
         public const int DayCumQty = 425;
         public const int DayAvgPx = 426;
@@ -399,7 +441,7 @@ namespace QuickFix.Fields
         public const int ListOrderStatus = 431;
         public const int ExpireDate = 432;
         public const int ListExecInstType = 433;
-        public const int CxlRejResponseTo = 434;
+        public const int CxlRejResponseTo = 434; //Тип запроса, на который данное сообщение является ответом.
         public const int UnderlyingCouponRate = 435;
         public const int UnderlyingContractMultiplier = 436;
         public const int ContraTradeQty = 437;
@@ -412,7 +454,7 @@ namespace QuickFix.Fields
         public const int ListStatusText = 444;
         public const int EncodedListStatusTextLen = 445;
         public const int EncodedListStatusText = 446;
-        public const int SecurityIDSource = 22;
+        public const int SecurityIDSource = 22; //Код ISIN инструмента, с которым совершена сделка (опциональное поле). Зна- чение по умолчанию "".
         public const int IOIQty = 27;
         public const int LastQty = 32;
         public const int SendingDate = 51;
@@ -434,7 +476,7 @@ namespace QuickFix.Fields
         public const int StipulationType = 233;
         public const int StipulationValue = 234;
         public const int YieldType = 235;
-        public const int Yield = 236;
+        public const int Yield = 236; //Значение доходности для сделки (только для фондового рынка).
         public const int TotalTakedown = 237;
         public const int Concession = 238;
         public const int RepoCollateralSecurityType = 239;
@@ -461,21 +503,23 @@ namespace QuickFix.Fields
         public const int BasisFeaturePrice = 260;
         public const int QuoteStatus = 297;
         public const int UnderlyingSecurityIDSource = 305;
-        public const int PartyIDSource = 447;
-        public const int PartyID = 448;
+        public const int PartyIDSource = 447; //Класс/тип или источник идентификаторов сторон. Допустимые значения в PartyID:
+        public const int PartyID = 448; //Идентификатор или код стороны. От чьего имени совершена сделка. За чей счет совершена сделка.
         public const int TotalVolumeTradedDate = 449;
         public const int TotalVolumeTradedTime = 450;
         public const int NetChgPrevDay = 451;
-        public const int PartyRole = 452;
-        public const int NoPartyIDs = 453;
-        public const int NoSecurityAltID = 454;
-        public const int SecurityAltID = 455;
-        public const int SecurityAltIDSource = 456;
+        public const int PartyRole = 452; //"P" - от своего имени, "А" - от имени клиента
+        public const int NoPartyIDs = 453; //Количество элементов в PartyIDs группе, иными словами – количество сторон.
+        public const int NoSecurityAltID = 454; /*Код государственной регистрации инструмента, с которым совершена сделка.
+                                                  Если в сделке поставлялось несколько выпусков с разными кодами регистра-
+                                                  ции, то поле рекомендуется не заполнять. Значение по умолчанию "". */
+        public const int SecurityAltID = 455; //Относиться 454
+        public const int SecurityAltIDSource = 456; //Относиться 454
         public const int NoUnderlyingSecurityAltID = 457;
         public const int UnderlyingSecurityAltID = 458;
         public const int UnderlyingSecurityAltIDSource = 459;
-        public const int Product = 460;
-        public const int CFICode = 461;
+        public const int Product = 460; //Идентификатор, показывающий к какому продукту относится ценная бумага (только для валютного рынка).
+        public const int CFICode = 461; //Тип финансового инструмента по стандарту ISO 10962 (только для валютного рынка).
         public const int UnderlyingProduct = 462;
         public const int UnderlyingCFICode = 463;
         public const int TestMessageIndicator = 464;
@@ -540,13 +584,13 @@ namespace QuickFix.Fields
         public const int PartySubID = 523;
         public const int NestedPartyID = 524;
         public const int NestedPartyIDSource = 525;
-        public const int SecondaryClOrdID = 526;
+        public const int SecondaryClOrdID = 526; //Код внешнего пользователя. Содержимое этого поля заносится в поле EXTREF заявки в таблицах Торговой Системы. Уточняйте у своего брокера формат данного поля в соответствии с правилами брокера.
         public const int SecondaryExecID = 527;
-        public const int OrderCapacity = 528;
-        public const int OrderRestrictions = 529;
-        public const int MassCancelRequestType = 530;
-        public const int MassCancelResponse = 531;
-        public const int MassCancelRejectReason = 532;
+        public const int OrderCapacity = 528; //Деятельность фирмы, разместившей заявку.
+        public const int OrderRestrictions = 529; //Ограничения по заявке. Может содержать набор ограничений/инструкций, разделенных пробелом.
+        public const int MassCancelRequestType = 530; //Тип массового запроса на снятие заявок.
+        public const int MassCancelResponse = 531; //Действия Торговой системы после получения массового запроса на снятие заявок.
+        public const int MassCancelRejectReason = 532; //Причина отклонения массового запроса на снятие заявок. Обязательное, если MassCancelResponse = 0.
         public const int TotalAffectedOrders = 533;
         public const int NoAffectedOrders = 534;
         public const int AffectedOrderID = 535;
@@ -566,9 +610,9 @@ namespace QuickFix.Fields
         public const int CrossType = 549;
         public const int CrossPrioritization = 550;
         public const int OrigCrossID = 551;
-        public const int NoSides = 552;
+        public const int NoSides = 552; //Направление сделки. Все остальные значения тега Side считаются невалидными и отклоняются.
         public const int Username = 553;
-        public const int Password = 554;
+        public const int Password = 554; //Пароль пользователя. (Максимальная длина – 8 символов) На MOEX поле является обязательным к заполнению
         public const int NoLegs = 555;
         public const int LegCurrency = 556;
         public const int TotalNumSecurityTypes = 557;
@@ -584,8 +628,9 @@ namespace QuickFix.Fields
         public const int TradSesStatusRejReason = 567;
         public const int TradeRequestID = 568;
         public const int TradeRequestType = 569;
-        public const int PreviouslyReported = 570;
-        public const int TradeReportID = 571;
+        public const int PreviouslyReported = 570; //Индикатор, информирующий о том, был ли уже раньше отправлен отчет о данной сделке второй стороне.
+        public const int TradeReportID = 571;  //Номер сделки в системе внутреннего учета Участника, совершившего внебиржевую сделку.
+
         public const int TradeReportRefID = 572;
         public const int MatchStatus = 573;
         public const int MatchType = 574;
@@ -639,7 +684,7 @@ namespace QuickFix.Fields
         public const int EncodedLegSecurityDesc = 622;
         public const int LegRatioQty = 623;
         public const int LegSide = 624;
-        public const int TradingSessionSubID = 625;
+        public const int TradingSessionSubID = 625; //Период торговой сессии, когда была размещена заявка.
         public const int AllocType = 626;
         public const int NoHops = 627;
         public const int HopCompID = 628;
@@ -650,7 +695,7 @@ namespace QuickFix.Fields
         public const int MidYield = 633;
         public const int OfferYield = 634;
         public const int ClearingFeeIndicator = 635;
-        public const int WorkingIndicator = 636;
+        public const int WorkingIndicator = 636; //Индикатор, который показывает, активирована ли на данный момент заявка.
         public const int LegLastPx = 637;
         public const int PriorityIndicator = 638;
         public const int PriceImprovement = 639;
@@ -674,8 +719,8 @@ namespace QuickFix.Fields
         public const int SettlCurrOfferFxRate = 657;
         public const int QuoteRequestRejectReason = 658;
         public const int SideComplianceID = 659;
-        public const int SettlType = 63;
-        public const int SettlDate = 64;
+        public const int SettlType = 63; //Платежный период (период расчетов)
+        public const int SettlDate = 64; //Дата расчетов, выраженная в ГГГГММДД формате.
         public const int AvgPxPrecision = 74;
         public const int SettlDate2 = 193;
         public const int PegOffsetValue = 211;
@@ -740,7 +785,7 @@ namespace QuickFix.Fields
         public const int PosAmt = 708;
         public const int PosTransType = 709;
         public const int PosReqID = 710;
-        public const int NoUnderlyings = 711;
+        public const int NoUnderlyings = 711; //Количество элементов в группе <Underlying Instrument>
         public const int PosMaintAction = 712;
         public const int OrigPosReqRefID = 713;
         public const int PosMaintRptRefID = 714;
@@ -780,7 +825,7 @@ namespace QuickFix.Fields
         public const int TotNumTradeReports = 748;
         public const int TradeRequestResult = 749;
         public const int TradeRequestStatus = 750;
-        public const int TradeReportRejectReason = 751;
+        public const int TradeReportRejectReason = 751;  //Код возврата. Если код возврата равен '0' - сделка добавлена.
         public const int SideMultiLegReportingType = 752;
         public const int NoPosAmt = 753;
         public const int AutoAcceptIndicator = 754;
@@ -797,9 +842,9 @@ namespace QuickFix.Fields
         public const int AllowableOneSidednessPct = 765;
         public const int AllowableOneSidednessValue = 766;
         public const int AllowableOneSidednessCurr = 767;
-        public const int NoTrdRegTimestamps = 768;
-        public const int TrdRegTimestamp = 769;
-        public const int TrdRegTimestampType = 770;
+        public const int NoTrdRegTimestamps = 768; //Количество элементов в TrdRegTimestamps группе.
+        public const int TrdRegTimestamp = 769;  //Регулирующая/торговая отметка времени. Например, время регистрации заявки в торговой системе.
+        public const int TrdRegTimestampType = 770; //Тип отметки времени.
         public const int TrdRegTimestampOrigin = 771;
         public const int ConfirmRefID = 772;
         public const int ConfirmType = 773;
@@ -846,7 +891,7 @@ namespace QuickFix.Fields
         public const int ApplQueueAction = 815;
         public const int NoAltMDSource = 816;
         public const int AltMDSourceID = 817;
-        public const int SecondaryTradeReportID = 818;
+        public const int SecondaryTradeReportID = 818;  //Номер сделки РЕПО.
         public const int AvgPxIndicator = 819;
         public const int TradeLinkID = 820;
         public const int OrderInputDevice = 821;
@@ -856,8 +901,9 @@ namespace QuickFix.Fields
         public const int ExchangeRule = 825;
         public const int TradeAllocIndicator = 826;
         public const int ExpirationCycle = 827;
-        public const int TrdType = 828;
-        public const int TrdSubType = 829;
+        public const int TrdType = 828; /*Признак "крупной сделки": "1" - если количество приобретаемых ценных бумаг составляет 5 и более % одного вида и категории/типа ценных бумаг эмитента.
+                                                                    "0" - в иных случаях (значение по умолчанию).*/
+        public const int TrdSubType = 829; //Идентификатор, уточняющий тип сделки.
         public const int TransferReason = 830;
         public const int AsgnReqID = 831;
         public const int TotNumAssignmentReports = 832;
@@ -879,12 +925,12 @@ namespace QuickFix.Fields
         public const int TargetStrategyParameters = 848;
         public const int ParticipationRate = 849;
         public const int TargetStrategyPerformance = 850;
-        public const int LastLiquidityInd = 851;
+        public const int LastLiquidityInd = 851;  //Этот флаг показывает, заключена ли сделка по пассивной (adding liquidity) или по агрессивной (taking liquidity) заявке. Применимо только для сообщений о сделках.
         public const int PublishTrdIndicator = 852;
         public const int ShortSaleReason = 853;
         public const int QtyType = 854;
         public const int SecondaryTrdType = 855;
-        public const int TradeReportType = 856;
+        public const int TradeReportType = 856; //MsgType = "AE" - Признак отзыва сделки:'0' - при добавлении сделки, '6' - при отзыве сделки.
         public const int AllocNoOrdersType = 857;
         public const int SharedCommission = 858;
         public const int ConfirmReqID = 859;
@@ -915,9 +961,9 @@ namespace QuickFix.Fields
         public const int UnderlyingStartValue = 884;
         public const int UnderlyingCurrentValue = 885;
         public const int UnderlyingEndValue = 886;
-        public const int NoUnderlyingStips = 887;
-        public const int UnderlyingStipType = 888;
-        public const int UnderlyingStipValue = 889;
+        public const int NoUnderlyingStips = 887;  //Количество элементов в группе «Underlying Stipulations» (только для фондового рынка).
+        public const int UnderlyingStipType = 888; //Тип дисконта. Обязательно, если NoUnderlyingStips (887) >0. (только для фондового рынка)
+        public const int UnderlyingStipValue = 889; //Значение дисконта. (только для фондового рынка)
         public const int MaturityNetMoney = 890;
         public const int MiscFeeBasis = 891;
         public const int TotNoAllocs = 892;
@@ -944,16 +990,16 @@ namespace QuickFix.Fields
         public const int AgreementDesc = 913;
         public const int AgreementID = 914;
         public const int AgreementDate = 915;
-        public const int StartDate = 916;
-        public const int EndDate = 917;
+        public const int StartDate = 916; //Дата расчетов по первой части сделки РЕПО, с переходом контроля над обеспечением от продавца к покупателю (только для фондового рынка).
+        public const int EndDate = 917; //Дата расчетов по второй части сделки РЕПО, с переходом контроля над обеспечением от покупателя к продавцу (только для фондового рынка).
         public const int AgreementCurrency = 918;
-        public const int DeliveryType = 919;
+        public const int DeliveryType = 919; //Тип расчета, при котором обеспечение финансового инструмента блокируется на время сделки РЕПО (только для фондового рынка).
         public const int EndAccruedInterestAmt = 920;
         public const int StartCash = 921;
         public const int EndCash = 922;
         public const int UserRequestID = 923;
         public const int UserRequestType = 924;
-        public const int NewPassword = 925;
+        public const int NewPassword = 925; //Новый пароль для SenderCompID(49). (Макс. длина–8 символов) Если использовалось это поле, то последующие сессии должны использовать указанный в данном поле пароль в поле 554. Важно! Доступно только для сервиса MFIX Trade.
         public const int UserStatus = 926;
         public const int UserStatusText = 927;
         public const int StatusValue = 928;
@@ -1033,7 +1079,7 @@ namespace QuickFix.Fields
         public const int UnderlyingTimeUnit = 1000;
         public const int LegTimeUnit = 1001;
         public const int AllocMethod = 1002;
-        public const int TradeID = 1003;
+        public const int TradeID = 1003; //Регистрационный идентификатор сделки. Поле передается в том случае, если сделка успешно добавлена / удалена.
         public const int SideTradeReportID = 1005;
         public const int SideFillStationCd = 1006;
         public const int SideReasonCd = 1007;
@@ -1068,8 +1114,8 @@ namespace QuickFix.Fields
         public const int UnderlyingDeliveryAmount = 1037;
         public const int UnderlyingCapValue = 1038;
         public const int UnderlyingSettlMethod = 1039;
-        public const int SecondaryTradeID = 1040;
-        public const int FirmTradeID = 1041;
+        public const int SecondaryTradeID = 1040; //Номер договора купли-продажи. Значение по умолчанию "".
+        public const int FirmTradeID = 1041; //Код участника в системе
         public const int SecondaryFirmTradeID = 1042;
         public const int CollApplType = 1043;
         public const int UnderlyingAdjustedQuantity = 1044;
@@ -1084,7 +1130,7 @@ namespace QuickFix.Fields
         public const int InstrumentPartySubID = 1053;
         public const int InstrumentPartySubIDType = 1054;
         public const int PositionCurrency = 1055;
-        public const int CalculatedCcyLastQty = 1056;
+        public const int CalculatedCcyLastQty = 1056; //Количество в сделке, выраженное в единицах ценных бумаг. Вычисляется как произведение LastQty (32) * LotSize (количество единиц инструмента в одном лоте)
         public const int AggressorIndicator = 1057;
         public const int NoUndlyInstrumentParties = 1058;
         public const int UndlyInstrumentPartyID = 1059;
@@ -1115,7 +1161,7 @@ namespace QuickFix.Fields
         public const int DisplayMinIncr = 1087;
         public const int RefreshQty = 1088;
         public const int MatchIncrement = 1089;
-        public const int MaxPriceLevels = 1090;
+        public const int MaxPriceLevels = 1090; //Максимальное количество ценовых уровней для сделок по этой заявке.
         public const int PreTradeAnonymity = 1091;
         public const int PriceProtectionScope = 1092;
         public const int LotType = 1093;
@@ -1150,7 +1196,7 @@ namespace QuickFix.Fields
         public const int RootPartySubIDType = 1122;
         public const int TradeHandlingInstr = 1123;
         public const int OrigTradeHandlingInstr = 1124;
-        public const int OrigTradeDate = 1125;
+        public const int OrigTradeDate = 1125; //Дата заключения сделки.
         public const int OrigTradeID = 1126;
         public const int OrigSecondaryTradeID = 1127;
         public const int ApplVerID = 1128;
@@ -1326,7 +1372,7 @@ namespace QuickFix.Fields
         public const int DerivativeInstrumentPartySubIDType = 1298;
         public const int DerivativeExerciseStyle = 1299;
         public const int MarketSegmentID = 1300;
-        public const int MarketID = 1301;
+        public const int MarketID = 1301; //Код биржи, на которую производится отчет. Допустимый код: "M" - ОАО Московская Биржа, является значением по умолчанию
         public const int MaturityMonthYearIncrementUnits = 1302;
         public const int MaturityMonthYearFormat = 1303;
         public const int StrikeExerciseStyle = 1304;
@@ -1353,7 +1399,7 @@ namespace QuickFix.Fields
         public const int ParentMktSegmID = 1325;
         public const int TradingSessionDesc = 1326;
         public const int TradSesUpdateAction = 1327;
-        public const int RejectText = 1328;
+        public const int RejectText = 1328; //Причина отзыва сделки (опциональное поле).
         public const int FeeMultiplier = 1329;
         public const int UnderlyingLegSymbol = 1330;
         public const int UnderlyingLegSymbolSfx = 1331;
@@ -1407,7 +1453,7 @@ namespace QuickFix.Fields
         public const int LegVolatility = 1379;
         public const int DividendYield = 1380;
         public const int LegDividendYield = 1381;
-        public const int CurrencyRatio = 1382;
+        public const int CurrencyRatio = 1382; //Курс рубля. Значение по умолчанию "0".
         public const int LegCurrencyRatio = 1383;
         public const int LegExecInst = 1384;
         public const int ContingencyType = 1385;
@@ -1434,7 +1480,7 @@ namespace QuickFix.Fields
         public const int RefApplExtID = 1406;
         public const int DefaultApplExtID = 1407;
         public const int DefaultCstmApplVerID = 1408;
-        public const int SessionStatus = 1409;
+        public const int SessionStatus = 1409; //Статус запроса на смену пароля.
         public const int DefaultVerIndicator = 1410;
         public const int Nested4PartySubIDType = 1411;
         public const int Nested4PartySubID = 1412;

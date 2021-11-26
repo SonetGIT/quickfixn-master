@@ -16,24 +16,21 @@ namespace QuickFix.Fields
             :base(Tags.Account) {}
         public Account(string val)
             :base(Tags.Account, val) {}
-
     }
-
 
     /// <summary>
     /// AdvId Field
     /// </summary>/
     public sealed class AdvId : StringField
     {
+        // Уникальный идентификатор сообщени
         public const int TAG = 2;
 
         public AdvId()
             :base(Tags.AdvId) {}
         public AdvId(string val)
             :base(Tags.AdvId, val) {}
-
     }
-
 
     /// <summary>
     /// AdvRefID Field
@@ -46,17 +43,15 @@ namespace QuickFix.Fields
             :base(Tags.AdvRefID) {}
         public AdvRefID(string val)
             :base(Tags.AdvRefID, val) {}
-
     }
-
 
     /// <summary>
     /// AdvSide Field
     /// </summary>/
     public sealed class AdvSide : CharField
     {
+        //ПОЗИЦИЯ
         public const int TAG = 4;
-
         public AdvSide()
             :base(Tags.AdvSide) {}
         public AdvSide(char val)
@@ -64,47 +59,43 @@ namespace QuickFix.Fields
 
 
         // Перечисления полей
-        public const char BUY = 'B';
-        public const char SELL = 'S';
-        public const char TRADE = 'T';
-        public const char CROSS = 'X';
+        public const char BUY = 'B'; //ПОКУПКА
+        public const char SELL = 'S'; //ПРОДАЖА
+        public const char TRADE = 'T'; //РОЗНИЧНАЯ ТОРГОВЛЯ
+        public const char CROSS = 'X'; //
     }
-
 
     /// <summary>
     /// AdvTransType Field
-    /// </summary>/
+    /// </summary>/    
     public sealed class AdvTransType : StringField
     {
+        //ТИПЫ ТРАНЗАКЦИЙ
         public const int TAG = 5;
-
         public AdvTransType()
             :base(Tags.AdvTransType) {}
         public AdvTransType(string val)
             :base(Tags.AdvTransType, val) {}
 
-
         // Перечисления полей
-        public const string CANCEL = "C";
-        public const string NEW = "N";
-        public const string REPLACE = "R";
+        public const string CANCEL = "C"; //ОТМЕНА
+        public const string NEW = "N"; //НОВЫЙ
+        public const string REPLACE = "R"; //ЗАМЕНА
     }
-
 
     /// <summary>
     /// AvgPx Field
     /// </summary>/
     public sealed class AvgPx : DecimalField
     {
+        //Расчетная средняя цена всех исполнений по данному ордеру.
         public const int TAG = 6;
 
         public AvgPx()
             :base(Tags.AvgPx) {}
         public AvgPx(Decimal val)
             :base(Tags.AvgPx, val) {}
-
     }
-
 
     /// <summary>
     /// BeginSeqNo Field
@@ -117,9 +108,7 @@ namespace QuickFix.Fields
             :base(Tags.BeginSeqNo) {}
         public BeginSeqNo(int val)
             :base(Tags.BeginSeqNo, val) {}
-
     }
-
 
     /// <summary>
     /// BeginString Field
@@ -132,9 +121,7 @@ namespace QuickFix.Fields
             :base(Tags.BeginString) {}
         public BeginString(string val)
             :base(Tags.BeginString, val) {}
-
     }
-
 
     /// <summary>
     /// BodyLength Field
@@ -147,9 +134,7 @@ namespace QuickFix.Fields
             :base(Tags.BodyLength) {}
         public BodyLength(int val)
             :base(Tags.BodyLength, val) {}
-
     }
-
 
     /// <summary>
     /// CheckSum Field
@@ -162,9 +147,7 @@ namespace QuickFix.Fields
             :base(Tags.CheckSum) {}
         public CheckSum(string val)
             :base(Tags.CheckSum, val) {}
-
     }
-
 
     /// <summary>
     /// ClOrdID Field
@@ -177,9 +160,7 @@ namespace QuickFix.Fields
             :base(Tags.ClOrdID) {}
         public ClOrdID(string val)
             :base(Tags.ClOrdID, val) {}
-
     }
-
 
     /// <summary>
     /// Commission Field
@@ -192,9 +173,7 @@ namespace QuickFix.Fields
             :base(Tags.Commission) {}
         public Commission(Decimal val)
             :base(Tags.Commission, val) {}
-
     }
-
 
     /// <summary>
     /// CommType Field
@@ -207,7 +186,6 @@ namespace QuickFix.Fields
             :base(Tags.CommType) {}
         public CommType(char val)
             :base(Tags.CommType, val) {}
-
 
         // Перечисления полей
         public const char PER_UNIT = '1';
@@ -224,7 +202,6 @@ namespace QuickFix.Fields
         public const char PER_BOND = '6';
     }
 
-
     /// <summary>
     /// CumQty Field
     /// </summary>/
@@ -236,9 +213,7 @@ namespace QuickFix.Fields
             :base(Tags.CumQty) {}
         public CumQty(Decimal val)
             :base(Tags.CumQty, val) {}
-
     }
-
 
     /// <summary>
     /// Currency Field
@@ -251,9 +226,7 @@ namespace QuickFix.Fields
             :base(Tags.Currency) {}
         public Currency(string val)
             :base(Tags.Currency, val) {}
-
     }
-
 
     /// <summary>
     /// EndSeqNo Field
@@ -266,9 +239,7 @@ namespace QuickFix.Fields
             :base(Tags.EndSeqNo) {}
         public EndSeqNo(int val)
             :base(Tags.EndSeqNo, val) {}
-
     }
-
 
     /// <summary>
     /// ExecID Field
@@ -276,12 +247,10 @@ namespace QuickFix.Fields
     public sealed class ExecID : StringField
     {
         public const int TAG = 17;
-
         public ExecID()
             :base(Tags.ExecID) {}
         public ExecID(string val)
             :base(Tags.ExecID, val) {}
-
     }
 
 
@@ -1262,6 +1231,7 @@ namespace QuickFix.Fields
     /// </summary>/
     public sealed class Side : CharField
     {
+        //Сообщает, что именно вы хотите сделать: купить(1, Buy) или продать(2, Sell).
         public const int TAG = 54;
 
         public Side()
@@ -1363,16 +1333,15 @@ namespace QuickFix.Fields
             :base(Tags.TimeInForce) {}
         public TimeInForce(char val)
             :base(Tags.TimeInForce, val) {}
-
-
+                
         // Перечисления полей
-        public const char DAY = '0';
-        public const char GOOD_TILL_CANCEL = '1';
+        public const char DAY = '0'; //дневной(0, Day)
+        public const char GOOD_TILL_CANCEL = '1'; //бессрочный
         public const char AT_THE_OPENING = '2';
-        public const char IMMEDIATE_OR_CANCEL = '3';
-        public const char FILL_OR_KILL = '4';
+        public const char IMMEDIATE_OR_CANCEL = '3'; //исполнить-или-отменить
+        public const char FILL_OR_KILL = '4'; //всё-или-отменить
         public const char GOOD_TILL_CROSSING = '5';
-        public const char GOOD_TILL_DATE = '6';
+        public const char GOOD_TILL_DATE = '6'; //срочный
         public const char AT_THE_CLOSE = '7';
         public const char GOOD_THROUGH_CROSSING = '8';
         public const char AT_CROSSING = '9';
@@ -2535,8 +2504,10 @@ namespace QuickFix.Fields
 
 
         // Перечисления полей
-        public const Boolean NO = false;
-        public const Boolean YES = true;
+        public const Boolean NO = false; // "N" - Reset mode - Режим сброса счётчика номеров сообщений.
+        public const Boolean YES = true; /* "Y" - Gap Fill mode - Режим заполнения пробелов (используется поле MsgSeqNum).
+                                                  В этом режиме сообщение используется как ответ на Resend Request в случае,
+                                                  когда одно или несколько сообщений должны быть пропущены.*/
         public const Boolean GAP_FILL_MESSAGE_MSGSEQNUM_FIELD_VALID = true;
         public const Boolean SEQUENCE_RESET_IGNORE_MSGSEQNUM = false;
     }
@@ -6102,7 +6073,6 @@ namespace QuickFix.Fields
             :base(Tags.MessageEncoding) {}
         public MessageEncoding(string val)
             :base(Tags.MessageEncoding, val) {}
-
 
         // Перечисления полей
         public const string ISO_2022_JP = "ISO-2022-JP";

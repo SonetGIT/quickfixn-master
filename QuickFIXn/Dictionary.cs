@@ -142,13 +142,13 @@ namespace QuickFix
             string abbr = GetString(key).Substring(0, 2).ToUpper();
             switch(abbr)
             {
-                case "SU": return System.DayOfWeek.Sunday;
-                case "MO": return System.DayOfWeek.Monday;
-                case "TU": return System.DayOfWeek.Tuesday;
-                case "WE": return System.DayOfWeek.Wednesday;
-                case "TH": return System.DayOfWeek.Thursday;
-                case "FR": return System.DayOfWeek.Friday;
-                case "SA": return System.DayOfWeek.Saturday;
+                case "ВС": return System.DayOfWeek.Sunday;
+                case "ПН": return System.DayOfWeek.Monday;
+                case "ВТ": return System.DayOfWeek.Tuesday;
+                case "СР": return System.DayOfWeek.Wednesday;
+                case "ЧТ": return System.DayOfWeek.Thursday;
+                case "ПТ": return System.DayOfWeek.Friday;
+                case "СБ": return System.DayOfWeek.Saturday;
                 default: throw new ConfigError("Illegal value " + GetString(key) + " for " + key);
             }
         }
@@ -197,13 +197,13 @@ namespace QuickFix
         {
             switch(val)
             {
-                case System.DayOfWeek.Sunday: SetString(key, "SU"); break;
-                case System.DayOfWeek.Monday: SetString(key, "MO"); break;
-                case System.DayOfWeek.Tuesday: SetString(key, "TU"); break;
-                case System.DayOfWeek.Wednesday: SetString(key, "WE"); break;
-                case System.DayOfWeek.Thursday: SetString(key, "TH"); break;
-                case System.DayOfWeek.Friday: SetString(key, "FR"); break;
-                case System.DayOfWeek.Saturday: SetString(key, "SA"); break;
+                case System.DayOfWeek.Sunday: SetString(key, "ВС"); break;
+                case System.DayOfWeek.Monday: SetString(key, "ПН"); break;
+                case System.DayOfWeek.Tuesday: SetString(key, "ВТ"); break;
+                case System.DayOfWeek.Wednesday: SetString(key, "СР"); break;
+                case System.DayOfWeek.Thursday: SetString(key, "ЧТ"); break;
+                case System.DayOfWeek.Friday: SetString(key, "ПТ"); break;
+                case System.DayOfWeek.Saturday: SetString(key, "СБ"); break;
                 default: throw new ConfigError("Illegal value " + val + " for " + key);
             }
         }

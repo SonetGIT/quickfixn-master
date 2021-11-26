@@ -7,6 +7,8 @@ namespace QuickFix
     {
         public class Heartbeat : Message
         {
+            /* ѕередаЄтс€ периодически дл€ контрол€ состо€ни€ соединени€.≈сли Heartbeat посылаетс€ в ответ на Test Request сообщение, то
+                поле TestReqID должно содержать идентификатор Test Request, на который оно €вл€етс€ ответом. */
             public const string MsgType = "0";
 
             public Heartbeat() : base()

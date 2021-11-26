@@ -17,7 +17,7 @@ namespace QuickFix.Fields.Converters
         public static char Convert(string c)
         {
             if (c.Length != 1)
-                throw new FieldConvertError("could not convert string to char, str=" + c);
+                throw new FieldConvertError("Не удалось преобразовать строку в char, str=" + c);
             return c[0];
         }
 

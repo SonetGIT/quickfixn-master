@@ -13,6 +13,7 @@ namespace QuickFix.Transport
 {
     /// <summary>
     /// Initiates connections and uses a single thread to process messages for all sessions.
+    /// Инициирует подключения и использует один поток для обработки сообщений для всех сеансов.
     /// </summary>
     public class SocketInitiator : AbstractInitiator
     {

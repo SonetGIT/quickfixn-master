@@ -32,7 +32,7 @@ namespace QuickFix.Fields.Converters
             {
                 case "Y": return true;
                 case "N": return false;
-                default: throw new FieldConvertError("Cannot convert string to boolean");
+                default: throw new FieldConvertError("Невозможно преобразовать строку в логическое значение");
             }
         }
     }

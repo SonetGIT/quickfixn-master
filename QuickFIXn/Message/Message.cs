@@ -494,7 +494,7 @@ namespace QuickFix
 
 
         /// <summary>
-        /// Constructs a group and stores it in this Message object
+        /// Создает группу и сохраняет ее в этом объекте сообщения
         /// </summary>
         /// <param name="grpNoFld">the group's counter field</param>
         /// <param name="msgstr">full message string</param>

@@ -15,15 +15,15 @@ namespace QuickFix
             }
 
             public OrderCancelRequest(
-                    QuickFix.Fields.OrigClOrdID aOrigClOrdID,
                     QuickFix.Fields.ClOrdID aClOrdID,
+                    QuickFix.Fields.OrigClOrdID aOrigClOrdID,                    
                     QuickFix.Fields.Symbol aSymbol,
                     QuickFix.Fields.Side aSide,
                     QuickFix.Fields.TransactTime aTransactTime
                 ) : this()
             {
-                this.OrigClOrdID = aOrigClOrdID;
                 this.ClOrdID = aClOrdID;
+                this.OrigClOrdID = aOrigClOrdID;
                 this.Symbol = aSymbol;
                 this.Side = aSide;
                 this.TransactTime = aTransactTime;
@@ -131,8 +131,7 @@ namespace QuickFix
                     return val;
                 }
                 set { SetField(value); }
-            }
-            
+            }            
             public void Set(QuickFix.Fields.SecondaryClOrdID val) 
             { 
                 this.SecondaryClOrdID = val;
@@ -142,8 +141,7 @@ namespace QuickFix
             { 
                 GetField(val);
                 return val;
-            }
-            
+            }            
             public bool IsSet(QuickFix.Fields.SecondaryClOrdID val) 
             { 
                 return IsSetSecondaryClOrdID();

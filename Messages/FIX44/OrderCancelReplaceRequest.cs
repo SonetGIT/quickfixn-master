@@ -26,7 +26,7 @@ namespace QuickFix
                 this.OrigClOrdID = aOrigClOrdID;
                 this.ClOrdID = aClOrdID;
                 this.Symbol = aSymbol;
-                this.Side = aSide;
+                this.Side = aSide;                
                 this.TransactTime = aTransactTime;
                 this.OrdType = aOrdType;
             }

@@ -3,8 +3,9 @@
 using QuickFix.Fields;
 namespace QuickFix
 {
-    namespace FIX40 
+    namespace FIX40
     {
+        //Heartbeat - передаётся периодически для контроля состояния соединения.
         public class Heartbeat : Message
         {
             public const string MsgType = "0";
